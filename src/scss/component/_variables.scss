@@ -1,13 +1,10 @@
-/*
-|----------------------------------|
- v.0.1 최초 공통화 작업
-|----------------------------------|
+/**
+|------------------------------------------|
+|      component : variabl.scss
+|------------------------------------------|
 */
 
 
-
-
-//variable
 $white: #ffffff;
 $black: #000000;
 $primary: #418ac9;
@@ -34,8 +31,6 @@ $gray-16: #c7c7c7;
 $body-color: $black !default;
 $border-color: $gray-6;
 $link-color: $body-color!default;
-
-/*티칭보드 오른쪽 하단 버튼*/
 $coolgray: #8991a3;
 
 
@@ -47,7 +42,7 @@ $spacer : 3rem;
 $font-family-sans-serif: 'NotoSansKR', 'Nanum Gothic', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:  'Nanum Gothic', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
-/*3가지 타입으로 통일*/
+
 $font-weight-light:           350 !default; //regular
 $font-weight-normal:          450 !default; //mediaum
 $font-weight-bold:            550 !default;

@@ -1,6 +1,6 @@
 /*
 |------------------------------------------|
-|      v1.1.0 천재교육 컨퍼넌트 공통관리
+|    컨퍼넌트 공통관리 버전 :  v1.0.0
 |------------------------------------------|
 */
 
@@ -11,9 +11,6 @@
 
 /*@import "fonts/Nanum";*/
 @import "../fonts/NotoSansKR";
-
-
-@import "../lib/jquery.mCustomScrollbar";
 
 //component
 @import "reboot";
@@ -36,3 +33,4 @@
 @import "badge";
 
 
+@import "../lib/jquery.mCustomScrollbar";
