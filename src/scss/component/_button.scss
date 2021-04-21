@@ -1,0 +1,429 @@
+/*
+|----------------------------------|
+ v.0.1 최초 공통화 작업
+ v.0.2 모바일 버튼 사이즈 변경 sm -> md
+ v.0.3 pc 버튼 line-height 수정
+ v.0.4 모바일 버튼 line-height 수정
+|----------------------------------|
+*/
+
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  letter-spacing: -0.025em;
+  font-weight: $font-weight-light;
+  height: 36px;
+  line-height: 23px;
+  border: 1px solid #fff;
+  background-color: #fff;
+
+  .name {
+    line-height: 22px;
+    display: inline-block;
+  }
+
+
+  &.btn:focus, .btn.focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &.btn-primary {
+    background-color: $primary;
+    border: 1px solid $primary;
+    color: #fff;
+
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled).active {
+      box-shadow: none;
+      outline: none;
+      background-color: $primary;
+      border: 1px solid $primary;
+    }
+  }
+
+  &.btn-default {
+    border: solid 1px #e0e0e0;
+    background-color: #ffffff;
+  }
+
+  &.btn-gray {
+    color: #323232;
+    background: #fcfcfc;
+    border-color: #e0e0e0;
+  }
+
+  &.btn-secondary {
+    color: #ffffff;
+    background: $secondary;
+    border-color: $secondary;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled).active {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  /* 버튼 사이즈 */
+  &.btn-sm {
+    height: 28px;
+    font-size: 13px;
+    padding: 0 8px;
+
+    .name {
+      line-height: 26px;
+    }
+  }
+
+  &.btn-lg {
+    height: 40px;
+    font-size: 15px;
+    padding: 5px 20px;
+    line-height: 28px;
+
+    .name {
+      line-height: 26px;
+    }
+  }
+
+  &.btn-xl {
+    height: 48px;
+    font-size: 16px;
+    padding: 5px 20px;
+    line-height: 32px;
+
+    .name {
+      line-height: 32px;
+    }
+  }
+
+
+  //티칭보드용 버튼
+  &-orange {
+    background: $orange;
+    color: #fff;
+    font-weight: $font-weight-normal;
+    letter-spacing: 0;
+    border-color: $orange;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  /*묶인 버튼의 경우 */
+  .btn-group {
+    .btn {
+      display: inline-block;
+      width: auto;
+      margin-right: 1px;
+      border-right: 0px;
+      //pointer-events:none;
+      &:first-child {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+
+      &:last-child {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-right: 0px;
+        border-right: solid 1px #e0e0e0;
+      }
+    }
+  }
+
+
+  /*아이콘형 버튼*/
+  &.ico-clip {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    min-width: auto;
+    background: url(../img/common/ico-clip.png) no-repeat center;
+    vertical-align: middle;
+    text-indent: -9000px;
+  }
+
+  &.btn_search {
+    width: 34px;
+    height: 34px;
+    background: url(../img/common/btn-search.png) no-repeat center;
+    text-indent: -9000px;
+  }
+
+  &.btn_allMenu {
+    width: 34px;
+    height: 34px;
+    background: url(../img/common/btn-menu.png) no-repeat center;
+    text-indent: -9000px;
+  }
+
+  &.btn-setting-aside {
+    width: 30px;
+    height: 30px;
+    background: url(../img/common/ico-setting-aside.png) no-repeat center;
+    border: none;
+  }
+
+
+  /* 교과학습 단원별보기 공통자료 버튼 +모양 */
+  .btn-icon-plus {
+    width: 11px;
+    height: 12px;
+    vertical-align: middle;
+    display: inline-block;
+    padding-top: 1px;
+    position: relative;
+    margin-left: 3px;
+
+    &:after {
+      width: 11px;
+      height: 2px;
+      background: white;
+      content: "";
+      display: block;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    &:before {
+      width: 12px;
+      height: 2px;
+      background: white;
+      content: "";
+      display: block;
+      transform: translate(-50%, -50%) rotate(90deg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+  }
+}
+
+/*버튼 그룹 정렬*/
+.btn-position {
+  display: flex;
+  /* justify-content: space-between;*/
+  .btn-right {
+    width: 100%;
+    text-align: right;
+  }
+
+  .btn-left {
+    width: 100%;
+  }
+}
+
+.mobile {
+  .btn {
+    font-size: 12px;
+    height: 32px;
+    border-radius: 3px;
+    padding: 5px 16px;
+    color: #666;
+    line-height: 20px;
+    font-weight: $font-weight-normal;
+    margin: 0 4px;
+    min-width: 70px;
+    &:first-of-type{
+      margin-left: 0;
+    }
+    &:last-of-type{
+      margin-right: 0;
+    }
+    .icon{
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .name{
+      line-height: 17px;
+      +.icon{
+        margin-right: 0;
+        margin-left: 6px;
+      }
+      }
+
+    /*종류별*/
+    &.btn-primary {
+      color: #fff;
+    }
+    &.btn-default{
+      border: 1px solid #bbb;
+    }
+    &.btn-circle {
+      border-radius: 16px;
+    }
+
+    /*사이즈별*/
+    &.btn-xl{
+      height: 52px;
+      padding: 10px 15px;
+      line-height: 29px;
+      font-size: 16px;
+      .name{
+        line-height: 27px;
+      }
+      &.btn-circle {
+        border-radius: 26px;
+      }
+    }
+    &.btn-lg{
+      font-size: 14px;
+      height: 44px;
+      line-height: 32px;
+      .name{
+        line-height: 30px;
+      }
+      &.btn-circle {
+        border-radius: 22px;
+      }
+    }
+    &.btn-ml{
+      font-size: 14px;
+      height: 36px;
+      line-height: 24px;
+      .name{
+        line-height: 22px;
+      }
+      &.btn-circle {
+        border-radius: 18px;
+      }
+    }
+    &.btn-md{
+      font-size: 12px;
+      height: 32px;
+      line-height: 20px;
+      .name{
+        line-height: 18px;
+      }
+    }
+    &.btn-circle {
+      border-radius: 16px;
+    }
+  }
+
+  .full-box {
+    width: 100%;
+
+    .btn {
+      width: 100%;
+    }
+  }
+  .half-box {
+    width: calc(100% + 8px);
+    margin: 0 -4px;
+    font-size: 0;
+
+    .btn {
+      display: inline-block;
+      width: calc(49.9% - 8px);
+      margin: 0 4px;
+    }
+  }
+
+
+  /* flag swich */
+  .flag-line {
+    min-height: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+    margin-left: 5px;
+    padding-top: 0;
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 46px;
+      height: 24px;
+      line-height: 24px;
+      margin-right: 10px;
+      text-align: left;
+      padding-left: 10px;
+      box-sizing: border-box;
+      border-radius: 12px;
+      background: #a0a7b8;
+      color: #fff;
+      appearance: none;
+      cursor: pointer;
+      z-index: 0;
+
+
+      &:before {
+        content: "";
+        text-align: right;
+        padding-right: 3px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 46px;
+        height: 24px;
+        border-radius: 12px;
+        z-index: 1;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 2px;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        border-radius: 12px;
+        border: none;
+        background: #fff;
+        -webkit-transition-duration: 300ms;
+        transition-duration: 300ms;
+        z-index: 2;
+      }
+    }
+    .switchOn {
+      width: 46px;
+      height: 24px;
+
+      &:before {
+        content: "";
+        padding-left: 3px;
+        text-align: left;
+        box-sizing: border-box;
+        padding-right: 0px;
+        border-radius: 12px;
+        background: $primary;
+      }
+
+       &.disabled {
+         cursor:none;
+         pointer-events: none;
+         &:before {
+           background: $gray-15;
+         }
+         &:after{
+           left: 3px;
+           background: $gray-7;
+         }
+       }
+
+      &:after {
+        left: 23px;
+      }
+    }
+  }
+  .switchOn {
+    background: none;
+  }
+}

@@ -1,0 +1,122 @@
+/*
+|----------------------------------|
+ v.0.1 최초 공통화 작업
+|----------------------------------|
+*/
+
+
+
+.pagination {
+  justify-content: center;
+  margin: 50px 0 0;
+  .page-item {
+    a {
+      border: 0;
+      line-height: 24px;
+      font-size: 15px;
+      &:focus{
+        border:none;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    .page-link {
+      padding: 0;
+      display: inline-block;
+      border: 0;
+      border-radius: 0;
+      text-align: center;
+      width: 24px;
+      height: 24px;
+      margin-left: 5px;
+      margin-right: 5px;
+      color: #000;
+      background-color: transparent;
+
+      &.page-arrow {
+        border: 2px solid #b8b8b8;
+        border-radius: 0;
+        background-color: #fff;
+        color: #666;
+      }
+    }
+    &.active{
+      .page-link {
+        border: 1px solid #287ec9;
+        line-height: 22px;
+        color: $primary;
+        background: #FFFFFF;
+        border-radius: 50%;
+        font-weight: $font-weight-normal;
+        text-align: center;
+        padding-right: 2px;
+      }
+    }
+    &.prev,&.next,&.first,&.last{
+      box-shadow: none;
+      outline: none;
+      border: none;
+      .page-link{
+        &:active,&:focus{
+          box-shadow: none;
+          outline: none;
+          border: none;
+        }
+      }
+    }
+    &.prev{
+      height: 24px;
+      font-size: 0;
+      a{
+        font-size: 0;
+        background: url("../img/common/ico-pagination-prev.png") no-repeat center center;
+      }
+      &.disabled{
+          a{
+            background: url("../img/common/ico-pagination-prev-disabled.png") no-repeat  center center;
+          }
+        }
+    }
+    &.next{
+      height: 24px;
+      font-size: 0;
+      a{
+        font-size: 0;
+        background: url("../img/common/ico-pagination-next.png") no-repeat  center center;
+      }
+      &.disabled{
+           a{
+             background: url("../img/common/ico-pagination-next-disabled.png") no-repeat  center center;
+           }
+         }
+    }
+    &.first {
+      height: 24px;
+      font-size: 0;
+      a{
+        font-size: 0;
+        background: url("../img/common/ico-pagination-first.png") no-repeat center center;
+      }
+      &.disabled{
+          a{
+            background: url("../img/common/ico-pagination-first-disabled.png") no-repeat  center center;
+          }
+        }
+    }
+    &.last{
+      height: 24px;
+      font-size: 0;
+      a{
+        font-size: 0;
+        background: url("../img/common/ico-pagination-last.png") no-repeat center center;
+      }
+      &.disabled{
+           a{
+             background: url("../img/common/ico-pagination-last-disabled.png") no-repeat  center center;
+           }
+         }
+    }
+  }
+}
+
+

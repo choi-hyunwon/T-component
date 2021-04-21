@@ -1,0 +1,38 @@
+/*
+|------------------------------------------|
+|      v1.1.0 천재교육 컨퍼넌트 공통관리
+|------------------------------------------|
+*/
+
+
+//reset
+@import "variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+/*@import "fonts/Nanum";*/
+@import "../fonts/NotoSansKR";
+
+
+@import "../lib/jquery.mCustomScrollbar";
+
+//component
+@import "reboot";
+@import "button";
+@import 'form';
+@import "icon";
+@import "list";
+@import "modal";
+@import "pagination";
+@import "slider";
+@import "tabs";
+@import "video";
+@import "notice";
+@import "reply";
+@import "table";
+@import "util";
+@import "wing";
+@import "accordion";
+@import "font";
+@import "badge";
+
+

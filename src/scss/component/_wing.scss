@@ -1,0 +1,71 @@
+/*
+|----------------------------------|
+ v.0.1 최초 공통화 작업
+|----------------------------------|
+*/
+
+
+
+.wing {
+  position: fixed;
+  right: calc( ( ( 100% - 1366px ) / 2 ) + 28px );
+  top: 235px;
+  text-align: center;
+  font-size: 14px;
+  z-index: 50;
+
+  .title {
+    display: block;
+    width: 90px;
+    height: 65px;
+    padding-top: 42px;
+    background: url(../img/home/bg_wing.png) no-repeat center / 100%;
+    color: #fff;
+  }
+
+  .wing-menu {
+    margin-bottom: 6px;
+    border-radius: 0 0 6px 6px;
+    border: 1px solid $border-color;
+    border-top: none;
+    background: #f6f9fa;
+
+    li {
+      a {
+        display: inline-block;
+        width: 75%;
+        padding: 7px 0 5px;
+
+        border-bottom: 1px solid #a7a7a7;
+        font-size: 14px;
+        color: #000;
+      }
+
+      &:last-child a {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .to-top {
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+    line-height:35px;
+    border-radius: 6px;
+    border: 1px solid $border-color;
+    background: #f6f9fa;
+    font-weight:$font-weight-bold;
+    font-size: 14px;
+    color: #333;
+
+    .icon-arr-up {
+      display: inline-block;
+      width: 7px;
+      height: 11px;
+      background: url(../img/home/ico-arr-up.png) no-repeat center / 100%;
+      margin-left: 5px;
+    }
+  }
+}
+

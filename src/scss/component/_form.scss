@@ -1,0 +1,781 @@
+/*
+|----------------------------------|
+ v.0.1 최초 공통화 작업
+ v.0.2 모바일 sub-select 추가 (border없는 select) - 선미
+ v.0.3 모바일 sub-select height 변경 - 성수
+|----------------------------------|
+*/
+
+
+
+@import "../lib/bootstrap-datepicker3";
+
+/**
+ * 폼 Component
+ */
+
+
+/* IE X button clear */
+input::-ms-clear {
+  display:none!important;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="email"] {
+  width: 100%;
+  height: 36px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+  padding: 0 14px;
+  font-weight: $font-weight-light;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+  outline: 0;
+}
+
+.form-control:focus {
+  border-color: $border-color;
+  outline: 0;
+  box-shadow: none;
+}
+
+// select
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 25px;
+  padding: 0 24px 0 0;
+  border: none;
+  background: #fff url(../img/common/ico-arrow-bottom-darkgray.png) no-repeat 90% center / 7px auto;
+
+  &:focus {
+    outline: 0;
+  }
+}
+select.form-control {
+  display: inline-block;
+  width: 160px;
+  height: 36px;
+  padding: 0 40px 0 12px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #fff url(../img/common/bg-ico-select.png) no-repeat 100% 50%;
+  vertical-align: middle;
+  color: #666;
+}
+select::-ms-expand {
+  display: none;
+}
+.select-wrap {
+  font-size: 0;
+
+  select {
+    + {
+      select {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// 검색바
+.search_bar {
+  position: relative;
+  text-align: right;
+  font-size: 0;
+  .btn {
+    background:none; border:0px;
+  }
+  .form-control{
+    padding: 0 25px 0 15px;
+    option{
+
+    }
+  }
+
+  input[type=text] {
+    width: 248px;
+    padding: 0 40px 0 15px;
+    margin-left: 5px;
+    &:focus {
+      outline: none;
+    }
+
+  }
+  .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: none;
+    border: none;
+  }
+
+  &.search_bar-fullwidth {
+    margin-bottom: 0px;
+
+    input[type=text] {
+      width: 100%;
+    }
+  }
+}
+
+// checkbox
+.custom-checkbox {
+  display: inline-block;
+  padding: 0;
+
+  .custom-control-input {
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .custom-control-label {
+    padding-left: 25px;
+    font-size: 14px;
+    outline: 0 !important;
+
+    &:before {
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border:1px solid #ccc;
+    }
+
+    &:after {
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.no-label {
+    width: 20px;
+
+    .custom-control-label {
+      padding-left: 20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.top-line {
+    .custom-control-input {
+      top: 4%;
+      transform: translateY(0);
+    }
+
+    .custom-control-label {
+      &:before {
+        top: 4%;
+        transform: translateY(0);
+      }
+
+      &:after {
+        top: 4%;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: #fafafa;
+    border-color: #ccc;
+  }
+
+  .custom-control-input:disabled:checked ~ .custom-control-label::after {
+    background: url(../img/common/bg-checkbox.png);
+  }
+}
+
+// radio
+.custom-radio {
+  padding-left: 0;
+
+  &.custom-control {
+    display: inline-block;
+  }
+
+  .custom-control-label {
+    padding-left: 24px;
+    font-size: 14px;
+
+    &:before {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border: 1px solid #e0e0e0;
+    }
+
+    &:after {
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      background: #fff;
+      //background: #fff url(../img/common/bg-radio.png) no-repeat center;
+    }
+  }
+
+  input[type=radio] {
+    &:checked {
+      + {
+        .custom-control-label {
+          &:before {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border: 1px solid #418ac9;
+            background: #fff;
+          }
+
+          &:after {
+            left: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            background: #418ac9;
+          }
+        }
+      }
+    }
+  }
+
+  .custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before {
+    background: #fafafa;
+  }
+
+  .custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::after {
+    background: #fafafa;
+  }
+
+  .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background: #fff;
+    border-color: #ccc;
+  }
+
+  .custom-control-input:disabled:checked ~ .custom-control-label::after {
+    background: #ccc;
+  }
+}
+
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none;
+}
+
+// input type=file
+.custom-file {
+  width: 100%;
+  height: auto;
+
+  .custom-file-input {
+    height: 36px;
+  }
+
+  .custom-file-input:focus ~ .custom-file-label {
+    border-color: #e0e0e0;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .custom-file-label {
+    width: calc(100% - 110px);
+    height: 36px;
+    line-height: 36px;
+    padding: 0 12px;
+    border-radius: 6px;
+    border-color: $border-color;
+    background: #fff;
+    font-size: 14px;
+    color: #888;
+
+    &:after {
+      content: "파일선택";
+      width: 96px;
+      height: 36px;
+      top: 0;
+      right: -110px;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 36px;
+      padding: 0;
+      background: $primary;
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+}
+
+//이미지선택용 첨부파일 (공통)
+.custom-file {
+  &.no-field {
+    float: right;
+    width: 95px;
+    margin: 0;
+
+    .custom-file-label {
+      width: 100%;
+      border:none;
+      font-size: 0;
+
+      &:after {
+        left: 0;
+      }
+    }
+  }
+  &.img-upload {
+    .custom-file-label {
+      &:after {
+        content: '이미지 선택';
+        line-height: 36px;
+        width: 96px;
+
+      }
+    }
+  }
+}
+
+.upload-list {
+  li {
+    position: relative;
+    display: inline-block;
+    margin-right: 9px;
+
+    img {
+      width: 106px;
+      height: 60px;
+      border-radius: 4px;
+    }
+
+    .delete-upload {
+      position: absolute;
+      right: -8px;
+      top: -8px;
+    }
+  }
+}
+
+//첨부파일 삭제버튼(공통)
+.delete-upload {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 1px solid $border-color;
+  border-radius: 100%;
+  text-indent: -9000px;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #666;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #666;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+
+
+// textarea
+textarea.form-control {
+  width: 100%;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  padding: 15px 17px;
+  font-size: 14px;
+  resize: none;
+}
+
+
+
+.custom-select-lg {
+  height: 36px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 15px;
+}
+
+/* 텍스트와 검색바 수평정렬*/
+.list_before{
+  &.level-line{
+    position: relative;
+    line-height: 36px;
+    margin-bottom: 20px;
+    .search_bar{
+      display:inline-block;
+      position: absolute;
+      right: 0;
+      top:0;
+    }
+  }
+}
+
+
+
+
+
+//태윤
+/*텍스트 검색바 , 서치바 수평정렬*/
+.level_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.phone-box{
+  .custom-select{
+    position: relative;
+  }
+  .line{
+    width: 12px;
+    height: 1px;
+    background-color: #e0e0e0;
+    display:inline-block;
+    transform: translateY(-3px);
+    margin: 0 7px;
+  }
+  .phone_number{
+    font-size: 14px;
+    font-weight: $font-weight-light;
+    line-height: 20px;
+    text-align: left;
+    color: #666666;
+
+  }
+}
+.email-box{
+  .custom-select{
+    margin-right: 5px;
+  }
+  .whelk{
+    margin-right: 5px;
+  }
+  .text{
+    margin-right: 5px;
+    font-weight: $font-weight-light;
+    letter-spacing: -0.35px;
+    text-align: left;
+    color: #666666;
+  }
+}
+
+
+.mobile{
+  /*input*/
+    input[type="text"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="email"]{
+      height: 46px;
+      min-width: 92px;
+      border-radius: 6px;
+      &::placeholder {
+        font-size: 14px;
+        letter-spacing: -0.35px;
+        color: $gray-16;
+        font-weight: $font-weight-light;
+      }
+      &:disabled{
+        background: $gray-15;
+        color: $gray-16;
+      }
+      &:focus{
+        color:#000;
+        border: 1px solid #000;
+      }
+      &.error{
+        border: 1px solid $red;
+      }
+      &.fill{
+        border: 1px solid #000;
+        color:#000;
+      }
+    }
+
+   /*select*/
+   select {
+    &.form-control{
+      min-width: 92px;
+      border-radius: 6px;
+      height: 46px;
+      padding: 0 15px;
+      width: 100%;
+      background: #fff url(../img/m-common/bg-select-arrow.png) no-repeat calc(100% - 16px) center / 11.5px auto;
+      &:disabled{
+        color: $gray-16;
+        background: #f7f7f7 url(../img/m-common/bg-select-arrow-disabled.png) no-repeat calc(100% - 16px) center / 11.5px auto;
+      }
+      &:focus {
+        outline: 0;
+      }
+      &.fill{
+        border: 1px solid #000;
+        color:#000;
+      }
+      &.sub-select{
+        background:  url(../img/common/ico-arrow-bottom-black-big.png) no-repeat right 53%;
+        background-size: 11px 6px;
+        border: none;
+        min-width: auto;
+        padding: 0 20px 0 0!important;
+        width: auto;
+        display: inline-block;
+        font-size: 16px;
+        color:#000;
+        font-weight: $font-weight-normal;
+        height:auto;
+      }
+    }
+  }
+
+   /*textarea*/
+   textarea{
+    &.form-control{
+      &::placeholder {
+        font-size: 14px;
+        letter-spacing: -0.35px;
+        color: $gray-16;
+        font-weight: $font-weight-light;
+        line-height: 21px;
+      }
+      &:disabled{
+        background: $gray-15;
+        color: $gray-16;
+      }
+      &:focus{
+        color:#000;
+        border: 1px solid #000;
+      }
+      &.fill{
+        font-size: 14px;
+        letter-spacing: -0.35px;
+        color: #000;
+        font-weight: $font-weight-light;
+        line-height: 21px;
+        border: 1px solid #000;
+      }
+    }
+  }
+
+  /*검색바 공통*/
+  .form-group{
+    &.search_bar{
+      text-align: left;
+      margin: 0 auto;
+      .form-control{
+        width: 118px;
+        margin-right: 8px;
+        margin-bottom: 0;
+      }
+      input[type="text"]{
+        width: calc(100% - 126px);
+        margin-bottom: 0;
+        margin-left: 0;
+        position: relative;
+        &:disabled{
+          +.btn{
+            .icon-search{
+                background: url(../img/m-common/ico-input-search-disabled.png) no-repeat 95% center / 20px auto;
+                width: 20px;
+                height: 20px;
+                margin-right: 0;
+              }
+          }
+        }
+      }
+      .btn{
+        padding: 0;
+        min-width: 20px;
+        height: 20px;
+        top:50%;
+        right: 16px;
+        transform: translateY(-60%);
+        .icon-search{
+          background: url(../img/m-common/ico-input-search.png)  no-repeat 95% center / 20px auto;
+          width: 20px;
+          height: 20px;
+          margin-right: 0;
+        }
+      }
+
+      &.full{
+        input[type="text"]{
+          width: calc(100%);
+        }
+      }
+
+    }
+
+  }
+
+ /*체크박스*/
+  .custom-checkbox {
+    display: inline-block;
+    padding: 0;
+
+    .custom-control-input {
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      /*체크박스 비활성화*/
+      &:disabled{
+        +.custom-control-label{
+          &:before {
+            border:none;
+          }
+          &:after {
+            width: 24px;
+            height: 24px;
+            border-radius: 3px;
+            border:1px solid $gray-6;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $gray-15;
+          }
+        }
+      }
+    }
+    .custom-control-label {
+      padding-left: 32px;
+      font-size: 14px;
+      outline: 0 !important;
+
+      &:before {
+        width: 24px;
+        height: 24px;
+        top: 55%;
+        transform: translateY(-50%);
+        border:1px solid $gray-6;
+        border-radius: 3px;
+      }
+
+      &:after {
+        width: 24px;
+        height: 24px;
+        border-radius: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url("../img/m-common/bg-checkbox.png") no-repeat center center/ 11px 7.5px;
+      }
+    }
+
+    /*----------절대 지우지 마세요~ (체크박스 기본 체크이미지 변경)----------------*/
+    .custom-control-input:checked~.custom-control-label::before{
+      background: $primary url("../img/m-common/bg-checkbox.png") no-repeat center center/ 11px 7.5px;}
+    .custom-control-input:checked~.custom-control-label::after{
+      background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+    }
+    /*--------------------------------------------------------------------*/
+  }
+
+
+
+/*라디오버튼*/
+
+  // radio
+  .custom-radio {
+    padding-left: 0;
+    .custom-control-label {
+      padding-left: 32px;
+      font-size: 14px;
+      &:before {
+        left: 0;
+        top: 55%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        border: 1px solid #e0e0e0;
+      }
+      &:after {
+        left: 5px;
+        top: 55%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        background: #fff;
+        //background: #fff url(../img/common/bg-radio.png) no-repeat center;
+      }
+    }
+    input[type=radio] {
+      &:checked {
+        + {
+          .custom-control-label {
+            &:before {
+              left: 0;
+              top: 55%;
+              transform: translateY(-50%);
+              width: 24px;
+              height: 24px;
+              border: 1px solid #418ac9;
+              background: #fff;
+            }
+
+            &:after {
+              left: 5px;
+              top: 55%;
+              transform: translateY(-50%);
+              width: 14px;
+              height: 14px;
+              border-radius: 100%;
+              background: #418ac9;
+            }
+          }
+        }
+      }
+
+
+
+    }
+    /*라디오버튼 비활성화*/
+    .custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::after {
+      background: $gray-7;
+    }
+    .custom-control-input[disabled] ~ .custom-control-label::before, .mobile .custom-radio .custom-control-input:disabled ~ .custom-control-label::before{
+      background: $gray-15;
+      border-color : $gray-6;
+    }
+  }
+}

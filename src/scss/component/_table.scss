@@ -1,0 +1,409 @@
+/*
+|----------------------------------|
+ v.0.1 최초 공통화 작업
+ v.0.2 no-select 추가 - 고태윤
+|----------------------------------|
+*/
+
+
+@import "../lib/bootstrap-table";
+table{
+  background-color: #fff;
+}
+.table {
+  margin: 0;
+
+  thead {
+    tr {
+      th {
+        text-align: center;
+        border-width: 1px;
+        background: #fcfcfc;
+        vertical-align: middle;
+        padding: 13px 0.75rem;
+        font-weight: normal;
+        font-size: 15px;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      th {
+        padding-left: 20px;
+        background: #f0f3f8;
+        border-bottom: 1px solid #e0e0e0;
+        border-right: 1px solid $border-color;
+        font-size: 15px;
+      }
+
+      td {
+        border-bottom: 1px solid #e0e0e0;
+        vertical-align: middle;
+        padding: 15px 0.75rem;
+        font-size: 14px;
+        text-align: left;
+        color: #666;
+
+        &.title {
+          text-align: left;
+          padding-left: 30px;
+          font-size: 15px;
+
+          .title_gongi {
+            max-width: 420px; /*430px 에서 수정([게시글 수 떨어짐]*/
+            font-weight: $font-weight-normal;
+            vertical-align: middle;
+
+            .bg{
+              opacity: 0.67;
+              background-color: #418ac9;
+              color: #fff;
+              line-height: 20px;
+              height: 20px;
+              font-weight: 350;
+              padding: 0 2px;
+            }
+
+            .text-primary {
+              margin-right: 10px;
+              font-weight: $font-weight-bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .text-center{
+    text-align: center;
+  }
+  &.text-align-center {
+    tbody {
+      td {
+        text-align: center;
+      }
+    }
+  }
+
+  &.flat-row {
+    margin-bottom: 20px;
+
+    th {
+      padding: 9px 5px;
+    }
+
+    td {
+      padding: 9px 5px;
+
+      &.title {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.body-line .flat-row td {
+  padding: 2px 5px;
+}
+
+.border-radius {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  .table {
+    &.info{
+      tbody{
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+
+        tr{
+          th{
+            font-weight: $font-weight-normal;
+            padding: 12px 20px;
+            vertical-align: middle;
+            &.title-top{
+              vertical-align: top;
+              padding: 16px 20px;
+            }
+            span{
+              line-height: 26px;
+              &.red_bullet{
+                position: relative;
+                &.title-top{
+                  &:after {
+                    left: 4px;
+                    top: 4px;
+                  }
+                }
+                &:after {
+                  content: '';
+                  display: inline-block;
+                  width: 4px;
+                  height: 4px;
+                  border-radius: 100%;
+                  background: #ff0000;
+                  vertical-align: text-top;
+                  position: relative;
+                  left: 4px;
+                  top: 4px;
+                }
+              }
+            }
+            &:nth-last-of-type(1){
+              border-bottom: none;
+            }
+
+
+          }
+          td{
+            &:nth-of-type(1){
+              border-bottom: none;
+            }
+            padding: 10px 20px;
+            .custom-radio{
+              margin-right: 20px;
+              .custom-control-label{
+                padding-left: 30px;
+              }
+
+            }
+            &.one_input_line{
+              .input_area{
+                margin-bottom: 0;
+                .custom-select{
+                  width: 142px;
+                  margin-right: 5px;
+                }
+                .text{
+                }
+                &.type2_input{
+                  .title{
+                    margin-right: 10px;
+                    font-size: 16px;
+                    line-height: 16px;
+                    letter-spacing: -0.4px;
+                    text-align: left;
+                    color: #666666;
+                  }
+                  .custom-select{
+                    width:100px;
+                    margin-right: 13px;
+                  }
+                  .text{
+                    width: 161px;
+                  }
+                }
+                &.no-select{
+                  .text{
+                    width: 584px;
+                  }
+                }
+              }
+            }
+            &.two_input_line{
+              .input_area{
+                margin-bottom: 10px;
+                &.no-select{
+                  .text{
+                    width: 584px;
+                  }
+                }
+                .text{
+                  width: 497px;
+                }
+              }
+              .text{
+                width: 100%;
+              }
+            }
+            .text{
+              width: 160px;
+              margin-right: 5px;
+              font-size: 14px;
+              color:#666666;
+              font-weight: $font-weight-light;
+            }
+            .password{
+              width: 244px;
+              color:#666666;
+            }
+            .phone-box{
+              display: flex;
+              align-items: center;
+              .line{
+                width: 12px;
+                height: 1px;
+                background-color: #e0e0e0;
+                display:inline-block;
+                margin: 0 10px;
+              }
+
+              .form-control{
+                width: 100px;
+              }
+            }
+            .email-box{
+              .text{
+                width: 160px;
+                margin-right: 5px;
+                font-size: 14px;
+                color:#666666;
+                font-weight: $font-weight-light;
+              }
+              display: flex;
+              align-items: center;
+              .custom-select{
+                margin-right: 5px;
+              }
+              .whelk{
+                margin-right: 5px;
+              }
+              .text{
+                margin-right: 5px;
+                font-weight: $font-weight-light;
+                letter-spacing: -0.35px;
+                text-align: left;
+                color: #666666;
+              }
+              &:nth-last-of-type(1){
+                border-bottom: none;
+              }
+            }
+            .birthday_box{
+              display: flex;
+              align-items: center;
+              .number{}
+              .day{
+                margin:0px 18px 0px 4px;
+              }
+            }
+            .number{
+              font-size: 14px;
+              font-weight: $font-weight-light;
+              line-height: 20px;
+              text-align: left;
+              color: #666666;
+              width: 100px;
+            }
+            .input_area{
+              display:flex;
+              align-items: center;
+              margin-bottom: 10px;
+            }
+            .desc{
+              font-size: 12px;
+              font-weight: $font-weight-light;
+              letter-spacing: -0.3px;
+              color: #bbb;
+              line-height: 12px;
+              &.valid{
+                color: $primary;
+              }
+              &.error{
+                color: #ff0000;
+              }
+            }
+            .btn{
+              font-weight: $font-weight-light;
+              padding: 5px 15px;
+            }
+            .text-input-sm{
+              width: 160px;
+              font-size: 14px;
+              color: #666666;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        th {
+          border-left: none;
+          border-bottom: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          vertical-align: middle;
+          padding: 0 30px;
+          font-weight: $font-weight-bold;
+          font-size: 16px;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+
+        td {
+          border-bottom: 1px solid #ccc;
+          padding: 18px 20px;
+
+          &.side30 {
+            padding-left: 30px;
+            padding-right: 30px;
+          }
+
+          &.side-right30 {
+            padding-right: 30px;
+          }
+        }
+
+        &:first-child {
+          th {
+            border-top: none;
+          }
+
+          td {
+            border-top: none;
+          }
+        }
+
+        &:last-child {
+          th {
+            border-bottom: none;
+          }
+
+          td {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+//평가자료-검색결과 틀
+.heading-wrap {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+
+  .heading-line {
+    padding: 22px 30px;
+    font-weight: $font-weight-light;
+    background: #f0f3f7;
+    height: 68px;
+
+
+    .board_total {
+      font-size: 16px;
+      color:#000;
+
+      span {
+        font-weight: $font-weight-bold;
+        color: $primary;
+      }
+    }
+  }
+
+  .body-line {
+    padding: 20px 30px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+  }
+}

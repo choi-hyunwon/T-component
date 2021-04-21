@@ -1,0 +1,710 @@
+/*
+|----------------------------------|
+ v.0.1 최초 공통화 작업
+ v.0.2 ico-new-badge 추가 - 고태윤
+|----------------------------------|
+*/
+
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-indent: -999em;
+  overflow: hidden;
+  /* background-size: 16px 16px;*/
+}
+
+/* 화살표 - 원형 차시창 사용*/
+.arrow-circle {
+  display: block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  border-radius: 100%;
+
+  & span:nth-child(1) {
+    display: block;
+    width: 6px;
+    height: 2px;
+    background: #0c0c0d;
+  }
+
+  & span:nth-child(2) {
+    display: block;
+    width: 7px;
+    height: 2px;
+    background: #0c0c0d;
+  }
+
+  &.next {
+    & span:nth-child(1) {
+      transform: translate(9px, 9px) rotate(45deg);
+    }
+
+    & span:nth-child(2) {
+      transform: translate(8.5px, 10.5px) rotate(-45deg);
+    }
+  }
+
+  &.prev {
+    & span:nth-child(1) {
+      transform: translate(7px, 9px) rotate(-45deg);
+    }
+
+    & span:nth-child(2) {
+      transform: translate(7.5px, 10.5px) rotate(45deg);
+    }
+  }
+
+  &.no-item {
+    & span:nth-child(1) {
+      background: #cccccc;
+    }
+
+    & span:nth-child(2) {
+      background: #ccc;
+    }
+  }
+}
+.icon-circle{
+  border-radius: 100%;
+}
+
+.icon-arrow-bottom-darkgray {
+  background-image : url("../img/common/ico-arrow-bottom-darkgray.png");
+}
+.icon-arrow-left-black {
+  background-image : url("../img/common/ico-arrow-left-black.png");
+}
+.icon-arrow-left-darkgray {
+  background-image: url("../img/common/ico-arrow-left-darkgray.png");
+}
+.icon-arrow-left-gray {
+  background-image: url("../img/common/ico-arrow-left-gray.png");
+}
+.icon-arrow-left-lightgray {
+  background-image: url("../img/common/ico-arrow-left-lightgray.png");
+}
+.icon-arrow-left-white {
+  background-image: url("../img/common/ico-arrow-left-white.png");
+}
+.icon-arrow-right-black {
+  background-image: url("../img/common/ico-arrow-right-black.png");
+}
+.icon-arrow-right-blue{
+  background-image: url("../img/common/icon-arrow-right-blue.png");
+}
+.icon-arrow-right-big {
+  background-image: url("../img/common/ico-arrow-right-big.png");
+}
+.icon-arrow-left-big {
+  background-image: url("../img/common/ico-arrow-left-big.png");
+}
+.icon-arrow-bottom-black-big {
+  background-image: url("../img/common/ico-arrow-bottom-black-big.png");
+}
+.icon-arrow-top-black-big {
+  background-image: url("../img/common/ico-arrow-top-black-big.png");
+}
+.icon-arrow-right-darkgray {
+  background-image: url("../img/common/ico-arrow-right-darkgray.png");
+}
+.icon-arrow-right-gray {
+  background-image: url("../img/common/ico-arrow-right-gray.png");
+}
+.icon-arrow-right-lightgray {
+  background-image: url("../img/common/ico-arrow-right-lightgray.png");
+}
+.icon-arrow-right-white {
+  background-image: url("../img/common/ico-arrow-right-white.png");
+}
+.icon-arrow-top-darkgray {
+  background-image: url("../img/common/ico-arrow-top-darkgray.png");
+}
+
+
+.icon-basket-small {
+  background-image: url("../img/common/ico-basket-small.png");
+}
+.icon-basket {
+  background-image: url("../img/common/ico-basket.png");
+  background-size: 14px 14px;
+}
+.icon-bell {
+  background-image: url("../img/common/ico-bell.png");
+}
+.icon-cd {
+  background-image: url("../img/common/ico-cd.png");
+}
+.icon-clip {
+  background-image: url("../img/common/ico-clip.png");
+}
+.icon-clipboard {
+  background-image: url("../img/common/ico-clipboard.png");
+}
+.icon-error {
+  background-image: url("../img/common/ico-error.png");
+}
+.icon-file {
+  background-image: url("../img/common/ico-file.png");
+}
+.icon-folder-gray {
+  background-image: url("../img/common/ico-folder-gray.png");
+}
+.icon-folder-green {
+  background-image: url("../img/common/ico-folder-green.png");
+}
+.icon-folder-white {
+  background-image: url("../img/common/ico-folder-white.png");
+}
+.icon-help {
+  background-image: url("../img/common/ico-help.png");
+}
+.icon-home {
+  background-image: url("../img/common/ico-home.png");
+}
+.icon-link {
+   background-image: url("../img/common/ico-link-connect-black.png");
+ }
+.icon-link-blue {
+  background-image: url("../img/common/ico-link-connect-blue.png");
+  cursor: pointer!important;
+}
+.icon-hyperlink {
+  background-image: url("../img/common/ico-hyperlink.png");
+}
+.icon-magic {
+  background-image: url("../img/common/ico-magic.png");
+}
+.icon-memo-center {
+  background-image: url("../img/common/ico-memo-center.png");
+}
+.icon-memo-center-blue {
+  background-image: url("../img/common/ico-memo-center-blue.png");
+}
+.icon-memo-left {
+  background-image: url("../img/common/ico-memo-left.png");
+}
+.icon-memo-pencil {
+  background-image: url("../img/common/ico-memo-pencil.png");
+}
+.icon-evaluate-white {
+  background-image: url("../img/common/ico-evaluate-white.png");
+}
+.icon-evaluate {
+  background-image: url("../img/common/ico-evaluate.png");
+}
+.icon-newly {
+  background-image: url("../img/common/ico-newly.png");
+}
+.icon-new {
+  background-image: url("../img/common/ico-new.png");
+}
+.icon-badge-new {
+  background-image: url("../img/common/ico-badge-new.png");
+  width: 30px;
+  height: 15px;
+  /*background-size: 30px 15px;*/
+}
+.icon-other {
+  background-image: url("../img/common/ico-other.png");
+  &.icon-other-hover {
+    background-image: url("../img/common/ico-other-hover.png");
+  }
+}
+.icon-play {
+  background-image: url("../img/common/ico-play-off.png");
+  &.icon-active{
+    background-image: url("../img/common/ico-play-on.png");
+  }
+}
+.icon-pause {
+  background-image: url("../img/common/ico-pause.png");
+}
+.icon-play-white {
+  background-image: url("../img/common/ico-play-white.png");
+}
+.icon-thumb-play {
+  background-image: url("../img/common/ico-play.png");
+}
+.icon-play-small-gray {
+  background-image: url("../img/common/ico-play-small-gray.png");
+}
+.icon-play-small-lightgray {
+  background-image: url("../img/common/ico-play-small-lightgray.png");
+}
+.icon-play-small-blue {
+  background-image: url("../img/common/ico-play-small-blue.png");
+}
+.icon-play-triangle-white {
+  background-image: url("../img/common/ico-play-triangle-white.png");
+}
+.icon-play-triangle-white-big {
+  background-image: url("../img/common/ico-play-triangle-white.png");
+}
+.icon-play-triangle-blue{
+  background-image: url("../img/common/ico-play-triangle-blue.png");
+}
+.icon-plus {
+  background-image: url("../img/common/ico-plus.png");
+}
+.icon-plus-bold {
+  background-image: url("../img/common/ico-plus-bold.png");
+}
+.icon-qna {
+  background-image: url("../img/common/ico-qna.png");
+}
+.icon-reply {
+  background-image: url("../img/common/ico-reply.png");
+}
+.icon-download {
+  background-image: url("../img/common/ico-download.png");
+  &.icon-disabled{
+    background-image: url("../img/common/ico-download-disabled.png");
+  }
+}
+.icon-scalefull {
+  background-image: url("../img/common/ico-scalefull.png");
+}
+.icon-search {
+  background-image: url("../img/common/ico-search.png");
+  &.icon-disabled{
+    background-image: url("../img/common/ico-search-disabled.png");
+  }
+}
+.icon-setting {
+  background-image: url("../img/common/ico-setting.png");
+}
+.icon-shop {
+  background-image: url("../img/common/ico-shop.png");
+}
+.icon-calender{
+  background-image: url("../img/common/ico-calender.png");
+}
+.icon-star {
+  background-image: url("../img/common/ico-star-off.png");
+  &.icon-active{
+    background-image: url("../img/common/ico-star-on.png");
+  }
+}
+.icon-star-small {
+  background-image: url("../img/common/ico-star-small-off.png");
+  &.icon-active{
+    background-image: url("../img/common/ico-star-small-on.png");
+  }
+}
+.icon-tpin-black {
+  background-image: url("../img/common/ico-tpin-black.png");
+}
+.icon-tpin-gray {
+  background-image: url("../img/common/ico-tpin-gray.png");
+  &.icon-disabled{
+    background-image: url("../img/common/ico-tpin-disabled.png");
+  }
+}
+.icon-tpin-white {
+  background-image: url("../img/common/ico-tpin-white.png");
+}
+.icon-plus-gray {
+  background-image: url("../img/common/ico-plus-gray.png");
+}
+.icon-heart {
+  background-image: url("../img/common/ico-heart.png");
+  &.off{
+    background-image: url("../img/common/ico-heart-off.png");
+  }
+}
+.icon-clock {
+  background-image: url("../img/common/ico-clock.png");
+}
+.icon-question {
+  background-image: url("../img/common/ico-question.png");
+}
+.icon-trash {
+  background-image: url("../img/common/ico-trash.png");
+}
+.icon-refresh {
+  background-image: url("../img/common/ico-refresh.png");
+}
+.icon-print {
+  background-image: url("../img/common/ico-print.png");
+}
+.icon-member {
+  background-image: url("../img/common/ico-member.png");
+}
+
+
+/*메인페이지 아이콘*/
+.icon-instagram {
+  background-image: url("../img/home/ico-instagram.png");
+  background-size: 15px 15px;
+
+}
+.icon-blog {
+  background-image: url("../img/home/ico-blog.png");
+  background-size: 15px 15px;
+}
+.icon-facebook {
+  background-image: url("../img/home/ico-facebook.png");
+  background-size: 15px 15px;
+}
+.icon-youtube {
+  background-image: url("../img/home/ico-youtube.png");
+  background-size: 15px 15px;
+}
+
+
+/*확장자아이콘*/
+.icon-word {
+  background-image: url("../img/common/ico-word.png");
+}
+.icon-excel {
+  background-image: url("../img/common/ico-excel.png");
+}
+.icon-zip {
+  background-image: url("../img/common/ico-zip.png");
+}
+.icon-mp4 {
+  background-image: url("../img/common/ico-mp4.png");
+}
+.icon-ppt {
+  background-image: url("../img/common/ico-ppt.png");
+}
+.icon-img {
+  background-image: url("../img/common/ico-img.png");
+}
+.icon-hangle {
+  background-image: url("../img/common/ico-hangle.png");
+}
+.icon-pdf {
+  background-image: url("../img/common/ico-pdf.png");
+}
+.icon-music {
+  background-image: url("../img/common/ico-music.png");
+}
+
+
+/*t-bag 아이콘*/
+.icon-writing {
+  background-image: url("../img/common/ico-tbag-writing.png");
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+}
+.icon-quiz {
+  background-image: url("../img/common/ico-tbag-quiz.png");
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+}
+.icon-presenterpick {
+  background-image: url("../img/common/ico-tbag-presenterpick.png");
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+}
+.icon-focusbell {
+  background-image: url("../img/common/ico-tbag-focusbell.png");
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+}
+.icon-darker {
+  background-image: url("../img/common/ico-tbag-darker.png");
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+}
+.icon-time {
+  background-image: url("../img/common/ico-tbag-timer.png");
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+}
+
+
+/*----유치 사용---*/
+.icon-gnb-search {
+  background-image: url("../img/common/ico-gnb-search.png");
+  width: 32px!important;
+  height: 32px!important;
+}
+.icon-search-remove {
+  background-image: url("../img/common/ico-search-remove.png");
+  width: 36px!important;
+  height: 36px!important;
+}
+.icon-login-arrow-right {
+  background-image: url("../img/common/ico-login-arrow-right.png");
+  width: 3px!important;
+  height: 10px!important;
+}
+/*------------*/
+
+
+
+.mobile {
+  .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: -999em;
+    overflow: hidden;
+    background-size: contain;
+  }
+
+
+
+  /*신규아이콘*/
+  .icon-board {
+    background-image: url("../img/m-common/ico-board.png");
+  }
+  .icon-submitconfirm {
+    background-image: url("../img/m-common/ico-submitconfirm.png");
+  }
+  .icon-check-all {
+    background-image: url("../img/m-common/ico-check-all.png");
+  }
+  .icon-play-line {
+    background-image: url("../img/m-common/ico-play-line.png");
+  }
+  .icon-play-triangle-line {
+    background-image: url("../img/m-common/ico-play-triangle-line.png");
+  }
+  .icon-plus-black {
+    background-image: url("../img/m-common/ico-plus-black.png");
+  }
+  .icon-badge-new {
+    background-image: url("../img/m-common/ico-badge-new.png");
+  }
+
+  /*기존아이콘*/
+  .icon-folder-gray {
+    background-image: url("../img/m-common/ico-folder-gray.png");
+  }
+  .icon-folder-green {
+    background-image: url("../img/m-common/ico-folder-green.png");
+  }
+  .icon-folder-white {
+    background-image: url("../img/m-common/ico-folder-white.png");
+  }
+  .icon-memo-center {
+    background-image: url("../img/m-common/ico-memo-center.png");
+  }
+  .icon-memo-center-blue {
+    background-image: url("../img/m-common/ico-memo-center-blue.png");
+  }
+  .icon-memo-left {
+    background-image: url("../img/m-common/ico-memo-left.png");
+  }
+  .icon-clipboard {
+    background-image: url("../img/m-common/ico-clipboard.png");
+  }
+  .icon-clip {
+    background-image: url("../img/m-common/ico-clip.png");
+  }
+  .icon-clock {
+    background-image: url("../img/m-common/ico-clock.png");
+  }
+  .icon-cd {
+    background-image: url("../img/m-common/ico-cd.png");
+  }
+  .icon-calender {
+    background-image: url("../img/m-common/ico-calender.png");
+  }
+  .icon-other{
+    background-image: url("../img/m-common/ico-other.png");
+  }
+  .icon-other-hover {
+    background-image: url("../img/m-common/ico-other-hover.png");
+  }
+  .icon-download {
+    background-image: url("../img/m-common/ico-download.png");
+    &.icon-disabled{
+      background-image: url("../img/m-common/ico-download-disabled.png");
+    }
+  }
+  .icon-scalefull {
+    background-image: url("../img/m-common/ico-scalefull.png");
+  }
+  .icon-refresh {
+    background-image: url("../img/m-common/ico-refresh.png");
+  }
+  .icon-qna {
+    background-image: url("../img/m-common/ico-qna.png");
+  }
+  .icon-question {
+    background-image: url("../img/m-common/ico-question.png");
+  }
+  .icon-trash {
+    background-image: url("../img/m-common/ico-trash.png");
+  }
+  .icon-reply {
+    background-image: url("../img/m-common/ico-reply.png");
+  }
+  .icon-print {
+    background-image: url("../img/m-common/ico-print.png");
+  }
+  .icon-setting {
+    background-image: url("../img/m-common/ico-setting.png");
+  }
+  .icon-basket-small {
+    background-image: url("../img/m-common/ico-basket-small.png");
+  }
+  .icon-bell {
+    background-image: url("../img/m-common/ico-bell.png");
+  }
+  .icon-shop {
+    background-image: url("../img/m-common/ico-shop.png");
+  }
+  .icon-error {
+    background-image: url("../img/m-common/ico-error.png");
+  }
+  .icon-file {
+    background-image: url("../img/m-common/ico-file.png");
+  }
+  .icon-help {
+    background-image: url("../img/m-common/ico-help.png");
+  }
+
+  .icon-play {
+    background-image: url("../img/m-common/ico-play-off.png");
+    &.icon-active {
+      background-image: url("../img/m-common/ico-play-on.png");
+    }
+  }
+  .icon-magic {
+    background-image: url("../img/m-common/ico-magic.png");
+  }
+  .icon-memo-pencil {
+    background-image: url("../img/m-common/ico-memo-pencil.png");
+  }
+  .icon-newly {
+    background-image: url("../img/m-common/ico-newly.png");
+  }
+  .icon-play-triangle-blue {
+    background-image: url("../img/m-common/ico-play-triangle-blue.png");
+  }
+  .icon-play-triangle-white {
+    background-image: url("../img/m-common/ico-play-triangle-white.png");
+  }
+  .icon-plus {
+    background-image: url("../img/m-common/ico-plus.png");
+  }
+  .icon-plus-gray {
+    background-image: url("../img/m-common/ico-plus-gray.png");
+  }
+  .icon-play-small-blue {
+    background-image: url("../img/m-common/ico-play-small-blue.png");
+  }
+  .icon-play-small-gray {
+    background-image: url("../img/m-common/ico-play-small-gray.png");
+  }
+  .icon-play-small-lightgray {
+    background-image: url("../img/m-common/ico-play-small-lightgray.png");
+  }
+  .icon-heart {
+    background-image: url("../img/m-common/ico-heart.png");
+  }
+  .icon-heart-off {
+    background-image: url("../img/m-common/ico-heart-off.png");
+  }
+  .icon-home {
+    background-image: url("../img/m-common/ico-home.png");
+  }
+
+  .icon-star{
+    background-image: url("../img/m-common/ico-star-off.png");
+    &.icon-active{
+      background-image: url("../img/m-common/ico-star-on.png");
+    }
+  }
+  .icon-star-small {
+    background-image: url("../img/m-common/ico-star-small-off.png");
+    &.icon-active{
+      background-image: url("../img/m-common/ico-star-small-on.png");
+    }
+  }
+  .icon-tpin-black {
+    background-image: url("../img/m-common/ico-tpin-black.png");
+  }
+  .icon-tpin-gray {
+    background-image: url("../img/m-common/ico-tpin-gray.png");
+    &.icon-disabled{
+      background-image: url("../img/m-common/ico-tpin-disabled.png");
+    }
+  }
+  .icon-tpin-white {
+    background-image: url("../img/m-common/ico-tpin-white.png");
+  }
+
+
+  .icon-blog {
+    background-image: url("../img/m-common/ico-blog.png");
+    background-size: 16px 16px;
+  }
+  .icon-instagram {
+    background-image: url("../img/m-common/ico-instagram.png");
+    background-size: 16px 16px;
+  }
+  .icon-youtube {
+    background-image: url("../img/m-common/ico-youtube.png");
+    background-size: 16px 16px;
+  }
+  .icon-facebook {
+    background-image: url("../img/m-common/ico-facebook.png");
+    background-size: 16px 16px;
+  }
+  .icon-excel {
+    background-image: url("../img/m-common/ico-excel.png");
+  }
+  .icon-hangle {
+    background-image: url("../img/m-common/ico-hangle.png");
+  }
+  .icon-img {
+    background-image: url("../img/m-common/ico-img.png");
+  }
+  .icon-music {
+    background-image: url("../img/m-common/ico-music.png");
+  }
+  .icon-pdf {
+    background-image: url("../img/m-common/ico-pdf.png");
+  }
+  .icon-zip {
+    background-image: url("../img/m-common/ico-zip.png");
+  }
+  .icon-ppt {
+    background-image: url("../img/m-common/ico-ppt.png");
+  }
+  .icon-word {
+    background-image: url("../img/m-common/ico-word.png");
+  }
+
+
+  .icon-link {
+    background-image: url("../img/m-common/ico-link.png");
+  }
+  .icon-link-blue {
+    background-image: url("../img/m-common/ico-link-blue.png");
+  }
+  .icon-link-connect-black {
+    background-image: url("../img/m-common/ico-link-connect-black.png");
+  }
+  .icon-link-connect-blue {
+    background-image: url("../img/m-common/ico-link-connect-blue.png");
+  }
+
+  .icon-new-badge{
+    background-image: url("../img/m-common/ico-new-badge.png");
+  }
+
+
+}

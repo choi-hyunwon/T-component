@@ -1,0 +1,371 @@
+/*
+|----------------------------------|
+ v.0.1 최초 공통화 작업
+|----------------------------------|
+*/
+
+
+.sharing-area {
+  .detail-box {
+    margin-bottom: 30px;
+  }
+}
+.movie-view {
+  .area-title {
+    position: relative;
+    padding: 30px 30px 27px;
+    background: #fcfcfc;
+    border-radius: 30px 30px 0 0;
+    border-bottom: 1px solid $border-color;
+
+    .nick-name.nick-name {
+      line-height: 1;
+      margin-bottom: 12px;
+      font-weight:$font-weight-bold;
+      font-size: 16px;
+    }
+
+    .title-movie {
+      line-height: 1;
+      height: auto;
+      margin-bottom: 13px;
+      font-size: 20px;
+    }
+
+    .author {
+      line-height: 1;
+      font-size: 14px;
+      color: #666;
+
+      em {
+        margin-left: 8px;
+      }
+    }
+
+    .app-copyright {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      border-bottom: 1px solid #666;
+
+      font-size: 14px;
+      color: #666;
+    }
+
+    .info-line {
+      position: absolute;
+      right: 30px;
+      bottom: 27px;
+
+      .date {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .hit {
+        margin-left: 15px;
+        font-size: 14px;
+        color: #666;
+
+        em {
+          margin-left: 8px;
+        }
+      }
+
+      .like {
+        margin-left: 15px;
+
+        .ico_heart {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          background: url(../img/common/ico-heart-off.png) no-repeat center;
+          margin-right: 4px;
+          vertical-align: middle;
+        }
+
+        &.on {
+          .ico_heart {
+            background: url(../img/common/ico-heart.png) no-repeat center;
+          }
+        }
+      }
+      .heart_num {
+        display: inline-block;
+        line-height: 24px;
+        font-size: 13px;
+        color: #666;
+      }
+    }
+  }
+
+  .play-information {
+    position: relative; display:flex;
+    border-bottom: 1px solid $border-color;
+
+    .play-part {
+      position: static;
+      left: 0;
+      top: 0;
+      width: 732px;
+      height: 100%;
+      padding: 30px;
+
+      .comment {
+        margin-bottom: 28px;
+        font-size: 15px;
+        color: #666;
+      }
+
+      video {
+        position: relative;
+        z-index: 10;
+
+        &:focus {
+          outline: 0;
+        }
+
+        height: 326px;
+      }
+    }
+
+    .side-link {
+      // margin-left: 732px;
+      width:290px;
+      padding: 30px;
+      min-height: 480px;
+      background: #fcfdfd;
+      border-left: 1px solid $border-color;
+
+      .tag-list {
+        margin-bottom: 50px;
+
+        .title-hashtag {
+          display: inline-block;
+          line-height: 1;
+          margin-bottom: 20px;
+          font-weight: $font-weight-bold;
+          font-size: 15px;
+          letter-spacing: -0.38px;
+        }
+
+        .hashtag-list {
+          margin-left: -5px;
+          margin-right: -5px;
+
+          a {
+            display: inline-block;
+            margin: 0 5px 10px 5px;
+            padding: 0 19px;
+            height: 35px;
+            line-height: 35px;
+            border-radius: 18px;
+            background: #f0f3f7;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .relation-sentence {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 120px;
+    background: #f0f3f7;
+    border-bottom: 1px solid $border-color;
+
+    .title {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-block;
+      width: 120px;
+      height: 100%;
+      text-align: center;
+      border-right: 1px solid $border-color;
+      font-weight: $font-weight-bold;
+      font-size: 15px;
+      vertical-align: middle;
+
+      span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .sentence_line {
+      position: relative;
+      padding: 13px 13px 13px 50px;
+      background: #fff;
+
+      + {
+        .sentence_line {
+          border-top: 1px solid $border-color;
+        }
+      }
+
+      .no {
+        position: absolute;
+        left: 15px;
+        top: 13px;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+        border-radius: 5px;
+        background: #5c5d6a;
+        font-size: 14px;
+        color: #fff;
+      }
+
+      a {
+        font-size: 15px;
+        color: #666;
+        letter-spacing: 0;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+
+  }
+  .relation-movie {
+    display:flex;
+    .relation-movie_title {padding:10px 0px; width:120px; display:flex; align-items: center; text-align:center; justify-content: center; background:#f0f3f7; border-bottom:1px solid #e0e0e0; border-right:1px solid #e0e0e0; font-weight: $font-weight-bold; font-size: 15px;}
+    .relation-movie_sentence_line{width:calc(100% - 120px); display:flex; align-items: center; padding:13px; border-bottom:1px solid #e0e0e0;
+      a {font-size:15px; color:#666; font-weight:$font-weight-light;
+        width: 870px;
+        word-break: keep-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        &:hover {text-decoration:underline;}
+      }
+    }
+  }
+
+  .btn_wrap {
+    margin: 0 30px;
+    margin-bottom: 10px;
+
+  }
+}
+
+/* video guide */
+/*공통 비디오 팝업 (악기 해설 영상 , 한국사)*/
+.movie-play {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width: 239px;
+  border-radius: 6px;
+  overflow: hidden;
+
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .custom-checkbox {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+  }
+
+  .dim {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+
+    .play-wrap {
+      position: absolute;
+      padding: 0 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .time {
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: $font-weight-normal;
+  }
+}
+.movie-arrange{
+  position: relative;
+  padding: 20px 30px;
+  border-bottom: 1px solid $border-color;
+  min-height: 174px;
+  &:last-child {
+    border-bottom: none;
+  }
+  .movie-info {
+    min-height: 135px;
+    margin-left: 259px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title {
+      font-weight: $font-weight-bold;
+      font-size: 15px;
+      color: #000;
+      line-height: 1;
+    }
+    .info {
+      margin: 5px 0 4px;
+      p {
+        word-break: keep-all;
+
+        span {
+          font-weight: $font-weight-bold;
+          position: relative;
+          &:before {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            height: 2px;
+            background: #666;
+            position: absolute;
+            left:-5px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        a {
+          color: $primary;
+        }
+      }
+    }
+    .btn-wrap {
+      font-size:0;
+      margin-bottom: 0;
+      .btn {
+        margin-right:5px;
+      }
+      .download{
+        margin-top: 10px;
+        .btn{
+          line-height: 20px;
+          background-color: $gray-10;
+          font-weight: $font-weight-normal;
+        }
+      }
+    }
+  }
+}

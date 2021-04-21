@@ -1,0 +1,1089 @@
+/*
+|----------------------------------------------|
+ v.0.1 최초 공통화 작업
+ v.0.2 - 모바일 > list-accordion 수정 - 한성수
+       - 모바일 > code-accordion 수정 - 한성수
+|----------------------------------------------|
+*/
+
+/*칼럼 그리드*/
+.column-grid { padding-bottom:20px;
+    /*전체 width 963px */
+    @function width($width){
+      $all_width: 963;
+      @return $width/$all_width*100%;
+    };
+
+    .item {
+      .table-subject {
+        th{padding: 5px;height: 40px}
+        td{padding:5px;}
+
+        .title {padding-left:0;
+          i {margin-right:3px;}
+        }
+      }
+      .search_btn {display:inline-block;}
+      .down_icon {}
+      .title_subject{line-height:24px; vertical-align: middle; color:#666666; letter-spacing: 0.025em;}
+    }
+
+    /* 2단 */
+    &.column-2 { display:flex; justify-content: center; margin:0px -10px;
+      .item {width:50%; padding:0px 0; margin:0px 10px;
+        .table-subject {
+          th, td{padding:5px;}
+          .title {padding-left:0;
+            i {margin-right:3px;}
+          }
+        }
+        .search_btn {display:inline-block;}
+        .down_icon {}
+        .title_subject{line-height:24px; vertical-align: middle; color:#666666; letter-spacing: 0.025em;}
+      }
+    }
+  }
+
+  .list-accordion {
+    border-radius:10px; border:1px solid #e0e0e0;
+    .item {
+      &:first-child .item_head {border-top-left-radius: 10px; border-top-right-radius: 10px;}
+      &:last-child .item_head{border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
+      .item_head{display:block; background:#f0f3f7; padding:16px 30px 15px; width:100%; display:flex; align-items:center; border-bottom:1px solid #e0e0e0;
+        &:after {display:block; content:""; clear:both;}
+        .txt {display:block; flex-grow: 1; cursor:pointer;
+          .num{display:inline-block; vertical-align: middle; text-align:center;
+            width: 36px;
+            height: 36px;
+            padding-top:4px;
+            margin: 0 10px 0 0;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: $font-weight-normal;
+            letter-spacing: -0.9px;
+            color: #ffffff;
+            background-color: #5c5d6a;
+          }
+          .title{display:inline-block; vertical-align: middle;
+            font-size: 20px;
+            font-weight: $font-weight-normal;
+            line-height: 24px;
+            letter-spacing: -0.4px;
+            color: #000000;
+          }
+        }
+        .buttons {display:inline-block; text-align:right; flex-grow: 0;  display:flex; align-items: center;
+          .link{display:inline-block; margin-right:5px;}
+          .download{display:inline-block; margin-right:-4px;}
+          .arrow { height:36px; cursor:pointer;
+            &.up {margin-top:0;}
+          }
+        }
+      }
+      .item_body{
+        .item_body_item {border-top:1px solid #e0e0e0;}
+        .item_body_item:first-child{border-top:0px;}
+        &.show {border-bottom:1px solid #e0e0e0;}
+        .body_head{ background:#fcfcfc; padding:16px 30px; width:100%; display:flex; justify-content: space-between; align-items:center; border-bottom:1px solid #e0e0e0;
+          .title {
+            font-size: 18px;
+            line-height: 24px;
+            // height:24px;
+            letter-spacing: -0.45px;
+          }
+          .num {
+            display:inline-block;
+            border-radius: 100%;
+            border:1px solid #656565;
+            color:#656565;
+            text-align:center;
+            height:17px;
+            line-height:14px;
+            font-size:12px;
+            font-weight:$font-weight-bold;
+            width:17px;
+            margin-right:5px;
+            vertical-align: middle;
+          }
+          .txt {
+            flex-grow: 1; display: flex; align-items: center;
+          }
+          .number {display:inline-block; border-radius:100%; border:1px solid }
+          .buttons{
+            flex-grow: 0; display:flex;
+            .buttons_box{display:inline-block; margin-right:2px;
+              a {display:inline-block; margin-right:2px;}
+              &:last-child{margin-right:0px;}
+            }
+          }
+          .title02 {width:480px; margin-left:5px; font-weight:$font-weight-light; letter-spacing: -0.025em; font-size:18px; word-break:keep-all;
+            &.title02-single_button {width:600px;}
+          }
+        }
+        .body_contents {
+          background-color: #fff;
+          // 아코디언 테이블버전
+          .body_contents_tables {
+            padding:20px 30px 0px;
+
+
+            .buttons{ padding-bottom:20px;
+              .btn {
+                margin-right:2px;
+                &:last-child {margin-right:0px;}
+              }
+              &.buttons-two {display:flex; justify-content:space-between; align-items: center; width:100%; }
+            }
+
+            .body_title {font-size:15px; line-height:20px; color:#666666; letter-spacing: -0.02em;display:inline-block; margin-bottom:20px;
+
+            }
+
+
+
+
+
+          }
+          .sub_item .show{
+            border-bottom:1px solid #e0e0e0;
+          }
+          // 아코디언 탭버전
+          .body_contents_tabs {
+
+          }
+
+
+          //내부 아코디언 CSS
+          .accordion_block { border-top:1px solid #e0e0e0;
+            &:first-child {border-top:0px solid #e0e0e0;}
+            .contests_head{ position:relative; display:flex; padding:15px 30px;
+              .latest_pop {width:53px; height:53px; padding:10px 0px; display:block; position:absolute; left:-32px; top:-25px; border-radius: 100%; background:#418ac9; text-align:center;
+                color:#fff;
+                line-height: 17px;
+                letter-spacing: -0.33px;
+                font-size: 13px;
+                font-weight: $font-weight-normal;
+                &:after {
+                  transform:translate(45px,-7px) rotate(135deg);
+                  display:block; content:"";
+                  width: 0px;
+                  height: 0px;
+                  border-top: 4px solid none;
+                  border-bottom: 15px solid #418ac9;;
+                  border-left: 5px solid transparent;
+                  border-right: 5px solid transparent;
+                }
+              }
+              .txt {
+                flex-grow: 1;
+                .title {
+                  display:block;
+                  font-size: 15px;
+                  font-weight: $font-weight-light;
+                  line-height: 24px;
+                  letter-spacing: -0.3px;
+                  text-align: left;
+                  color: #666666;
+                  margin-bottom: 10px;
+                  //교과학습 inner title
+                  .title_line {
+                    border-bottom:1px solid rgba(255,255,255,0);
+                    display:inline-block;
+                    &:hover {border-bottom:1px solid #bbbbbb; cursor:pointer;}
+                  }
+                  &.on {color: #418ac9; font-weight:$font-weight-bold;
+                    .title_line {
+                      &:hover {border-bottom:1px solid #418ac9;  cursor:pointer;}
+                    }
+                  }
+                }
+                .buttons {display:block;
+                  .buttons_box {display:inline-block;  margin-right:2px;
+                    a {display:inline-block; margin-right:2px; margin:2.5px 0px;}
+                  }
+                }
+              }
+              .button {
+                display:flex; align-items: center;
+              }
+            }
+            .contents_body{
+              .contents_body_wrap { padding-bottom:30px; padding-top:0px;}
+              padding:0px 0px;
+            }
+          }//accordion_block
+          &.show {
+            .body_contents_tables { border-bottom:1px solid #e0e0e0;
+              &:last-of-type {border-bottom:0px;}
+            }
+          }
+        }//body_contents
+      }
+
+      /* 아코디언용 기본형 up&down 버튼 */
+      .arrow{display:inline-block; margin-left:30px; width:18px; height:20px; flex-grow: 0; position: relative;
+        & span:nth-child(1) {display:block; width:11px; height:2px; background:#0c0c0d; position:absolute; top:50%; }
+        & span:nth-child(2) {display:block; width:11px; height:2px; background:#0c0c0d; position:absolute; top:50%; }
+        &.up {
+          & span:nth-child(1) {transform:translate(0px, -50%) rotate(-45deg);}
+          & span:nth-child(2) {transform:translate(7px,-50%) rotate(45deg);}
+        }
+        &.down {
+          & span:nth-child(1) {transform:translate(0px, -50%) rotate(45deg);}
+          & span:nth-child(2) {transform:translate(7px,-50%) rotate(-45deg);}
+        }
+        &.arrow_headline { padding-top:14px;}
+      }
+      /* 아코디언용 원형 up&down 버튼 */
+      .arrow-circle {flex-grow: 0; display:inline-block; text-align:right; vertical-align: middle;
+        width:25px; height:25px; border:1px solid #e0e0e0; background:#fff; content:""; border-radius: 100%;
+        & span:nth-child(1) {display:block; width:7px; height:2px; background:#0c0c0d; }
+        & span:nth-child(2) {display:block; width:7px; height:2px; background:#0c0c0d; }
+        &.up {
+          & span:nth-child(1) {transform:translate(6px,9.8px) rotate(-45deg);}
+          & span:nth-child(2) {transform:translate(10px,8px) rotate(45deg);}
+        }
+        &.down {
+          & span:nth-child(1) {transform:translate(6px,10px) rotate(45deg);}
+          & span:nth-child(2) {transform:translate(10px,8px) rotate(-45deg);}
+        }
+      }
+
+      /* 아코디언용 원형 up&down 버튼 */
+      .down_button {
+        width:25px;
+        display:inline-block;
+        position:relative;
+        vertical-align: middle;
+        cursor:pointer;
+
+        .btn-icon-circle {
+          position:absolute; top:50%; transform:translateY(-50%); width:25px; height:25px; border:1px solid #e0e0e0; background:#fff; display:block; content:""; border-radius: 100%;
+          & span:nth-child(1) {display:block; width:7px; height:2px; background:#0c0c0d; }
+          & span:nth-child(2) {display:block; width:7px; height:2px; background:#0c0c0d;}
+          &.up {
+            & span:nth-child(1) {transform:translate(6px,9.8px) rotate(-45deg);}
+            & span:nth-child(2) {transform:translate(10px,8px) rotate(45deg);}
+          }
+          &.down {
+            & span:nth-child(1) {transform:translate(6px,10px) rotate(45deg);}
+            & span:nth-child(2) {transform:translate(10px,8px) rotate(-45deg);}
+          }
+        }
+      }
+
+      /* body contents 안에 있는 버튼일 경우 폰트속성이 바뀜 */
+      .body_contents {
+        .btn {font-size:14px; letter-spacing: -0.025em; font-weight:$font-weight-normal; }
+        .btn-gray {color:#333333; display:flex; align-items: center;}
+      }
+
+    }
+    .item:last-child {
+      .item_head {border-bottom:0px;}
+    }
+
+    /* 리스트 아코디언 안에 있는 tab 마진 설정 */
+    .nav-tabs{margin-top:20px;}
+  }
+
+  .code-accordion {
+    overflow:hidden;
+    &.code-accordion_nohddien {
+      overflow:visible;
+      .item{
+        .item_head{
+          padding: 22px 30px; /*디버깅 no.1187*/
+        }
+      }
+    }
+    .item_head {
+      border-top-left-radius:0;
+      border-top-right-radius:0;
+      border-bottom-left-radius:0;
+      border-bottom-right-radius:0;
+      .txt {display:flex!important;
+        .title {width:15%; font-weight:$font-weight-normal!important;}
+        .sub_title {font-size:15px; letter-spacing: -0.025em; font-weight:$font-weight-light; padding-right:40px;}
+      }
+    }
+    .item:last-child .item_head {
+      border-top-left-radius:0;
+      border-top-right-radius:0;
+      border-bottom-left-radius:0;
+      border-bottom-right-radius:0;
+    }
+    .subject_md_header_arrowbtn {margin-left:25px;}
+    .item_head {border-top:1px solid #e0e0e0;
+
+    }
+    .item:last-child .item_head{border-bottom:1px solid #e0e0e0!important;}
+    .item:first-of-type{
+      .item_head {border-top:0px;}
+    }
+  }
+
+  .popup-accordion {
+    border-radius:10px; border:1px solid #e0e0e0;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    height: 340px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: auto;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
+    .item{
+      label{
+        @include ellipsis(1);
+        width: 650px;
+
+      }
+      .item_head{
+        color: #000;
+        height: 50px;
+        padding: 15px 20px;
+        position: relative;
+        font-size: 15px;
+        display: flex;
+        .custom-checkbox{
+          flex-grow:1;
+        }
+        .subject_name{
+          padding-left: 35px;
+          font-size: 15px;
+          font-weight: $font-weight-bold;
+        }
+      }
+      .item_body{
+        .list{
+          color: #666666;
+          font-size: 14px;
+          li{
+            height: 45px;
+            padding: 10px 20px;
+            text-overflow: ellipsis;
+            border-bottom: 1px solid #e0e0e0;
+            :last-child{
+              border: none;
+            }
+          }
+        }
+        .subject_name{
+          padding-left: 35px;
+        }
+      }
+
+      .arrow{
+        margin-left: 0;
+      }
+
+    }
+
+    .item {
+      &:first-child .item_head {border-top-left-radius: 10px; border-top-right-radius: 10px;}
+      &:last-child .item_head{border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
+      .item_head{display:block; background:#f0f3f7; padding:16px 30px; width:100%; display:flex; align-items:center; border-bottom:1px solid #e0e0e0;
+        &:after {display:block; content:""; clear:both;}
+        .txt {display:block; flex-grow: 1;
+          .num{display:inline-block; vertical-align: middle; text-align:center;
+            width: 36px;
+            height: 36px;
+            padding-top:5px;
+            margin: 0 10px 0 0;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: $font-weight-normal;
+            letter-spacing: -0.9px;
+            color: #ffffff;
+            background-color: #5c5d6a;
+          }
+          .title{display:inline-block; vertical-align: middle;
+            font-size: 20px;
+            font-weight: $font-weight-normal;
+            line-height: 24px;
+            letter-spacing: -0.4px;
+            color: #000000;
+          }
+        }
+        .buttons {display:inline-block; text-align:right; flex-grow: 0;  display:flex; align-items: center;
+          .link{display:inline-block; margin-right:5px;}
+          .download{display:inline-block; margin-right:-4px;}
+        }
+      }
+      .item_body{
+        .item_body_item {border-top:1px solid #e0e0e0;}
+        .item_body_item:first-child{border-top:0px;}
+        &.show {border-bottom:1px solid #e0e0e0;}
+        .body_head{ background:#fcfcfc; padding:16px 30px; width:100%; display:flex; align-items:center; border-bottom:1px solid #e0e0e0;
+          .title {
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.45px;
+            vertical-align: middle;
+          }
+          .num {
+            display:inline-block;
+            border-radius: 100%;
+            border:1px solid #656565;
+            color:#656565;
+            text-align:center;
+            height:17px;
+            line-height:17px;
+            font-size:12px;
+            font-weight:$font-weight-normal;
+            padding-right:1px;
+            width:17px;
+            margin-right:5px;
+            vertical-align: middle;
+          }
+          .txt {
+            flex-grow: 1;
+          }
+          .number {display:inline-block; border-radius:100%; border:1px solid }
+          .buttons{
+            flex-grow: 0;
+            .buttons_box{display:inline-block; margin-right:10px;
+              &:last-child{margin-right:0px;}
+            }
+          }
+        }
+        .body_contents {
+          // 아코디언 테이블버전
+          .body_contents_tables {
+            padding:20px 30px 0px;
+
+            .buttons{ padding-bottom:20px;
+              .btn {
+                margin-right:2px;
+                &:last-child {margin-right:0px;}
+              }
+            }
+
+            .body_title {font-size:15px; line-height:9px; color:#666666; letter-spacing: -0.02em;display:inline-block; margin-bottom:20px;
+              &:after {display:inline-block; height:1px; width:100%; background:#bbbbbb; content:"";}
+            }
+
+
+
+
+
+          }
+          .sub_item .show{
+            border-bottom:1px solid #e0e0e0;
+          }
+
+
+          //내부 아코디언 CSS
+          .accordion_block { border-top:1px solid #e0e0e0;
+            &:first-child {border-top:0px solid #e0e0e0;}
+            .contests_head{ position:relative; display:flex; padding:20px 30px;
+              .latest_pop {width:53px; height:53px; padding:10px 0px; display:block; position:absolute; left:-32px; top:-25px; border-radius: 100%; background:#418ac9; text-align:center;
+                color:#fff;
+                line-height: 17px;
+                letter-spacing: -0.33px;
+                font-size: 13px;
+                font-weight: $font-weight-bold;
+                &:after {
+                  transform:translate(45px,-7px) rotate(135deg);
+                  display:block; content:"";
+                  width: 0px;
+                  height: 0px;
+                  border-top: 4px solid none;
+                  border-bottom: 15px solid #418ac9;;
+                  border-left: 5px solid transparent;
+                  border-right: 5px solid transparent;
+                }
+              }
+              .txt {
+                flex-grow: 1;
+                .title {
+                  display:block;
+                  font-size: 15px;
+                  font-weight: $font-weight-bold;
+                  line-height: 24px;
+                  letter-spacing: -0.3px;
+                  text-align: left;
+                  color: #666666;
+                  .title_line {
+                    display:inline-block; border-bottom:1px solid #bbbbbb;
+                  }
+                  &.on {color: #418ac9;
+                    .title_line {
+                      border-bottom:1px solid #418ac9; cursor:pointer;
+                    }
+                  }
+                }
+                .buttons {display:block; margin-top: 10px;
+                  .buttons_box {display:inline-block;}
+                }
+              }
+            }
+            .contents_body{
+              .contents_body_wrap { padding-bottom:30px; padding-top:15px;}
+              padding:0px 0px;
+            }
+          }//accordion_block
+
+          //팝업 전용
+          .list {
+            li:last-child {border-bottom:0px!important;}
+          }
+        }//body_contents
+      }
+
+      /* 아코디언용 기본형 up&down 버튼 */
+      .arrow{display:inline-block; margin-left:30px; width:18px; height:20px; flex-grow: 0; position: relative;
+        & span:nth-child(1) {display:block; width:11px; height:2px; background:#0c0c0d; position:absolute; top:50%; }
+        & span:nth-child(2) {display:block; width:11px; height:2px; background:#0c0c0d; position:absolute; top:50%; }
+        &.up {
+          & span:nth-child(1) {transform:translate(0px, -50%) rotate(-45deg);}
+          & span:nth-child(2) {transform:translate(7px,-50%) rotate(45deg);}
+        }
+        &.down {
+          & span:nth-child(1) {transform:translate(0px, -50%) rotate(45deg);}
+          & span:nth-child(2) {transform:translate(7px,-50%) rotate(-45deg);}
+        }
+        &.arrow_headline { padding-top:14px;}
+      }
+      /* 아코디언용 원형 up&down 버튼 */
+      .arrow-circle {flex-grow: 0; display:inline-block; text-align:right; vertical-align: middle;
+        width:25px; height:25px; border:1px solid #e0e0e0; background:#fff; content:""; border-radius: 100%;
+        & span:nth-child(1) {display:block; width:6px; height:2px; background:#0c0c0d; }
+        & span:nth-child(2) {display:block; width:6px; height:2px; background:#0c0c0d; }
+        &.up {
+          & span:nth-child(1) {transform:translate(7px,10px) rotate(-45deg);}
+          & span:nth-child(2) {transform:translate(11px,8px) rotate(45deg);}
+        }
+        &.down {
+          & span:nth-child(1) {transform:translate(7px,10px) rotate(45deg);}
+          & span:nth-child(2) {transform:translate(11px,8px) rotate(-45deg);}
+        }
+      }
+
+      /* 아코디언용 원형 up&down 버튼 */
+      .down_button {
+        width:25px;
+        display:inline-block;
+        position:relative;
+        vertical-align: middle;
+        cursor:pointer;
+
+        .btn-icon-circle {
+          position:absolute; top:50%; transform:translateY(-50%); width:25px; height:25px; border:1px solid #e0e0e0; background:#fff; display:block; content:""; border-radius: 100%;
+          & span:nth-child(1) {display:block; width:6px; height:2px; background:#0c0c0d; }
+          & span:nth-child(2) {display:block; width:6px; height:2px; background:#0c0c0d; }
+          &.up {
+            & span:nth-child(1) {transform:translate(7px,10px) rotate(-45deg);}
+            & span:nth-child(2) {transform:translate(11px,8px) rotate(45deg);}
+          }
+          &.down {
+            & span:nth-child(1) {transform:translate(7px,10px) rotate(45deg);}
+            & span:nth-child(2) {transform:translate(11px,8px) rotate(-45deg);}
+          }
+        }
+      }
+    }
+
+    //체크박스 있는 팝업 class : popup-accrodion_checkbox 추가
+    &.popup-accrodion_checkbox{
+      .custom-checkbox { display:flex; align-items: center;
+        label {display:inline-block!important; width:20px!important; height:20px; text-indent:-999px; padding-left:0px!important;}
+      }
+      .subject_name {padding-left:10px!important; flex-grow:1;}
+    }
+
+
+  }
+
+  /*-----유치 사용-----*/
+  //교재자료 아코디언에 쓰임
+  .list-normal {
+    border-radius:10px; border:1px solid #e0e0e0; border-bottom:0px;
+    &.basic {overflow: hidden; }
+    .item {
+      .item_head{display:block; background:#f0f3f7; padding:16px 30px; width:100%; display:flex; align-items:center; height:68px;
+        &:after {display:block; content:""; clear:both;}
+        .txt {display:block; flex-grow: 1;  display:flex; align-items: center;
+          .num{display:inline-block; vertical-align: middle; text-align:center;
+            width: 36px;
+            height: 36px;
+            padding-top:5px;
+            margin: 0 10px 0 0;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight :$font-weight-bold;
+            letter-spacing: -0.9px;
+            color: #ffffff;
+            background-color: #5c5d6a;
+          }
+          .title{display:inline-block; vertical-align: middle;
+            font-size: 20px;
+            font-weight :$font-weight-bold;
+            line-height: 24px;
+            letter-spacing: -0.4px;
+            color: #000000;
+          }
+        }
+        .buttons {display:inline-block; text-align:right; flex-grow: 0;  display:flex; align-items: center;
+          .link{display:inline-block; margin-right:5px;}
+          .download{display:inline-block; margin-right:-4px;}
+        }
+      }
+      .item_body{
+        .item_body_item {}
+        .item_body_item:first-child{}
+        .body_head{ background:#fcfcfc; padding:16px 30px; width:100%; display:flex; align-items:center;
+          .title {
+            font-size: 18px;
+            line-height: 24px;
+            height:24px;
+            letter-spacing: -0.45px;
+          }
+          .num {
+            display:inline-block;
+            border-radius: 100%;
+            border:1px solid #656565;
+            color:#656565;
+            text-align:center;
+            height:17px;
+            line-height:14px;
+            font-size:12px;
+            font-weight:$font-weight-bold;
+            width:17px;
+            margin-right:5px;
+            vertical-align: middle;
+          }
+          .txt {
+            flex-grow: 1;
+          }
+          .number {display:inline-block; border-radius:100%; border:1px solid }
+          .buttons{
+            flex-grow: 0;
+            .buttons_box{display:inline-block; margin-right:10px;
+              &:last-child{margin-right:0px;}
+            }
+          }
+        }
+        .body_contents {
+          // 아코디언 테이블버전
+          .body_contents_tables {
+            padding:20px 30px 0px;
+
+            .buttons{ padding-bottom:20px;
+              .btn {
+                margin-right:1px;
+                &:last-child {margin-right:0px;}
+              }
+            }
+
+            .body_title {font-size:15px; line-height:9px; color:#666666; letter-spacing: -0.02em;display:inline-block; margin-bottom:20px;
+              &:after {display:inline-block; height:1px; width:100%; background:#bbbbbb; content:"";}
+            }
+          }
+          .sub_item .show{
+
+          }
+          .sub_item:first-child {
+            .body_head {}
+          }
+          .sub_item:last-child {
+            .body_head {}
+          }
+          .sub_item:last-child .show{
+
+          }
+          //내부 아코디언 CSS
+          .accordion_block {
+            &:first-child {}
+            .contests_head{ position:relative; display:flex; padding:15px 30px;
+              .latest_pop {width:53px; height:53px; padding:10px 0px; display:block; position:absolute; left:-32px; top:-25px; border-radius: 100%; background:#418ac9; text-align:center;
+                color:#fff;
+                line-height: 17px;
+                letter-spacing: -0.33px;
+                font-size: 13px;
+                font-weight :$font-weight-bold;
+                &:after {
+                  transform:translate(45px,-7px) rotate(135deg);
+                  display:block; content:"";
+                  width: 0px;
+                  height: 0px;
+                  border-top: 4px solid none;
+                  border-bottom: 15px solid #418ac9;;
+                  border-left: 5px solid transparent;
+                  border-right: 5px solid transparent;
+                }
+              }
+              .txt {
+                flex-grow: 1;
+                .title {
+                  display:block;
+                  font-size: 15px;
+                  font-weight:$font-weight-bold;
+                  line-height: 24px;
+                  letter-spacing: -0.3px;
+                  text-align: left;
+                  color: #666666;
+                  .title_line {
+                    display:inline-block; border-bottom:1px solid #bbbbbb;
+                  }
+                  &.on {color: #418ac9;
+                    .title_line {
+                      border-bottom:1px solid #418ac9;
+                    }
+                  }
+                }
+                .buttons {display:block; margin-top: 10px;
+                  .buttons_box {display:inline-block;}
+                }
+              }
+            }
+            .contents_body{
+              .contents_body_wrap { padding-bottom:30px; padding-top:15px;}
+              padding:0px 0px;
+            }
+          }//accordion_block
+        }//body_contents
+      }
+
+      /* 아코디언용 기본형 up&down 버튼 */
+      .arrow{display:inline-block; margin-left:30px; width:18px; height:20px; flex-grow: 0; position: relative;
+        & span:nth-child(1) {display:block; width:11px; height:2px; background:#0c0c0d; position:absolute; top:50%; }
+        & span:nth-child(2) {display:block; width:11px; height:2px; background:#0c0c0d; position:absolute; top:50%; }
+        &.up {
+          & span:nth-child(1) {transform:translate(0px, -50%) rotate(-45deg);}
+          & span:nth-child(2) {transform:translate(7px,-50%) rotate(45deg);}
+        }
+        &.down {
+          & span:nth-child(1) {transform:translate(0px, -50%) rotate(45deg);}
+          & span:nth-child(2) {transform:translate(7px,-50%) rotate(-45deg);}
+        }
+        &.arrow_headline { padding-top:14px;}
+      }
+      /* 아코디언용 원형 up&down 버튼 */
+      .arrow-circle {flex-grow: 0; display:inline-block; text-align:right; vertical-align: middle;
+        width:25px; height:25px; border:1px solid #e0e0e0; background:#fff; content:""; border-radius: 100%;
+        & span:nth-child(1) {display:block; width:6px; height:2px; background:#0c0c0d; }
+        & span:nth-child(2) {display:block; width:6px; height:2px; background:#0c0c0d; }
+        &.up {
+          & span:nth-child(1) {transform:translate(7px,10px) rotate(-45deg);}
+          & span:nth-child(2) {transform:translate(11px,8px) rotate(45deg);}
+        }
+        &.down {
+          & span:nth-child(1) {transform:translate(7px,10px) rotate(45deg);}
+          & span:nth-child(2) {transform:translate(11px,8px) rotate(-45deg);}
+        }
+      }
+
+      /* 아코디언용 원형 up&down 버튼 */
+      .down_button {
+        width:25px;
+        display:inline-block;
+        position:relative;
+        vertical-align: middle;
+
+        .btn-icon-circle {
+          position:absolute; top:50%; transform:translateY(-50%); width:25px; height:25px; border:1px solid #e0e0e0; background:#fff; display:block; content:""; border-radius: 100%;
+          & span:nth-child(1) {display:block; width:6px; height:2px; background:#0c0c0d; }
+          & span:nth-child(2) {display:block; width:6px; height:2px; background:#0c0c0d; }
+          &.up {
+            & span:nth-child(1) {transform:translate(7px,10px) rotate(-45deg);}
+            & span:nth-child(2) {transform:translate(11px,8px) rotate(45deg);}
+          }
+          &.down {
+            & span:nth-child(1) {transform:translate(7px,10px) rotate(45deg);}
+            & span:nth-child(2) {transform:translate(11px,8px) rotate(-45deg);}
+          }
+        }
+      }
+
+      &:last-of-type {
+        .item_body {
+
+        }
+      }
+    }
+
+  }
+  //보더라인 만
+  .list-normal {
+    .item{
+      .item_head {border-bottom:1px solid #e0e0e0;}
+      .item_body.show {border-bottom:1px solid #e0e0e0;}
+    }
+    .item:last-child{
+      .item_head {border-bottom:0px solid #e0e0e0;}
+      .item_body.show {border-bottom:0px solid #e0e0e0; border-top:1px solid #e0e0e0;}
+    }
+    .sub_item {
+      .body_head{border-bottom:1px solid #e0e0e0;}
+      .body_contents.show{border-bottom:1px solid #e0e0e0;}
+    }
+    .sub_item:last-child {
+      .body_head{border-bottom:0px solid #e0e0e0;}
+      .body_contents.show{border-bottom:0px solid #e0e0e0; border-top:1px solid #e0e0e0;}
+    }
+  }
+  /*----------------*/
+
+
+  .mobile{
+    /*칼럼 그리드*/
+    .column-grid{ padding-bottom:0px;
+      .item{
+
+        .table-subject{
+          tr {
+            &:last-of-type{
+              td {border-bottom:0px;}
+            }
+          }
+          th{display:none;}
+          td{display:none; border-top:0px; padding:14px 0px;}
+          .title {display:flex;
+            .icon {width:15px; margin-top:5px; margin-right:10px;}
+            .title_subject {width:calc(100% - 15px);}
+          }
+        }
+      }
+    }
+
+    //교과학습 아코디언 - 단원별 보기
+    .list-accordion{
+        border-radius: 6px;
+
+        /*** list-accordion 내부 컴포넌트 ***/
+
+        //최근차시 말풍선
+        .latest_pop-mobile {width:54px; padding:3px 0px; display:block;  border-radius: 16px; background:#418ac9; text-align:center; margin-bottom:7.5px;
+            color:#fff;
+            font-size: 11px;
+            font-weight: $font-weight-light;
+            &:after {
+                transform: translate(38px, 1px) rotate(170deg);
+                display: block;
+                content: "";
+                width: 0px;
+                height: 0px;
+                border-top: 4px solid none;
+                border-bottom: 7.5px solid #418ac9;
+                border-left: 3.5px solid transparent;
+                border-right: 3.5px solid transparent;
+                position: absolute;
+            }
+        }//latest_pop-mobile
+
+        //button 공통
+        .buttons { display:inline-block!important;
+            //list-accordion 공통 버튼
+            .btn{
+                &:last-of-type{margin-right:0px;}
+                margin:0px; margin-right:6px; margin-top:8px;
+                @include btn-circle();
+            }
+            //list-accordion > contents head 버튼
+            .buttons_box{ margin:0px!important;
+                a{
+                    &:last-of-type{margin-right:0px;}
+                    margin:0px!important; margin-right:5px!important; margin-top:8px!important;
+                    @include btn-circle();
+                }
+                .btn-gray { @include btn-color(w); @include btn-size(md);}
+            }
+        }
+
+
+
+        .item {
+            &:first-child .item_head {border-top-left-radius: 6px; border-top-right-radius: 6px;}
+            &:last-child .item_head{border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;}
+
+            .item_head{position:relative; background:#f0f3f7; padding: 24px 16px 24px; width:100%; display: block;  border-bottom:1px solid #e0e0e0;
+                &:after {display:block; content:""; clear:both;}
+
+                .txt {display:block; cursor:pointer; display:flex; align-items:center;
+                    line-height: 20px;
+                    margin-bottom: 8px;
+
+                    .num{
+
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 3px;
+                        line-height:19px;
+                        padding:2px;
+                        font-size: 14px;
+                        margin-right: 5px;
+                        font-weight: $font-weight-normal;
+                        letter-spacing: -0.35px;
+                        color: #ffffff;
+                        background-color: #5c5d6a;
+                    }
+                    .title{
+                        width:calc(100% - 24px);
+                        font-size: 16px;
+                        font-weight: $font-weight-normal;
+                        letter-spacing: -0.4px;
+                        color: #000000;
+                        word-break: keep-all;
+                        padding-right:15px;
+                        line-height:25px;
+                    }
+                }
+
+                .buttons {
+                    text-align: left;
+                    display: inline-block;
+                    padding-right:15px;
+                    .arrow {
+                        height: 4.5px;
+                        position: absolute;
+                        top: 50%;
+                        right: 16px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }//item_head
+
+            .item_body{
+                .item_body_item {border-top:1px solid #e0e0e0;}
+                .item_body_item:first-child{border-top:0px;}
+                &.show {border-bottom:1px solid #e0e0e0;}
+
+
+                .body_head{
+                    background:$gray-15; padding:20px 15px; width:100%;display: block;
+                    .title {
+                        font-size: 14px;
+                        line-height: 21px;
+                        margin-bottom: 8px;
+                        letter-spacing: -0.35px;
+                        font-weight: $font-weight-normal;
+                    }
+                    .num {
+                        display: none;
+                    }
+                }//body_head
+
+                .body_contents {
+                    background-color: #fff;
+
+                    //내부 아코디언 CSS
+                    .accordion_block {
+                        .contests_head{
+                            padding:26px 15px 20px;
+                            .txt {
+                                .title {
+                                    margin-bottom: 12px;
+                                    .title_line {
+                                        font-size: 14px;
+                                        width: 250px;
+                                        word-break: keep-all;
+                                        line-height: 21px;
+                                        letter-spacing: -0.35px;
+
+                                        &:hover{
+                                            border:none
+                                        }
+                                    }
+                                }
+                            }
+                            .contents_body{
+                                padding:0px;
+                                .contents_body_wrap { padding-bottom:20px; padding-top:0px;}
+                            }
+                        }//contents_head
+                    }//accordion_block
+
+                    &.show {
+                        .body_contents_tables { border-bottom:1px solid #e0e0e0;
+                        &:last-of-type {border-bottom:0px;}
+                        }
+                    }//show
+                    //버튼 right margin reset
+                    .body_contents .accordion_block .contests_head .txt .buttons .buttons_box {margin-right:0px;}
+                    .body_head .buttons .buttons_box {margin-right:0px;}
+
+                    .body_contents_tables {padding:14px 20px;}
+                }//body_contents
+
+            }//item_body
+
+        }//item
+
+
+        /* 아코디언용 기본형 up&down 버튼 */
+        .arrow{width:7px; height:4.5px; position: relative;
+            & span:nth-child(1) {display:block; width:7px; height:1px; background:#0c0c0d; position:absolute; top:50%; }
+            & span:nth-child(2) {display:block; width:7px; height:1px; background:#0c0c0d; position:absolute; top:50%; }
+            &.up {
+                & span:nth-child(1) {transform:translate(0px, -50%) rotate(-45deg);}
+                & span:nth-child(2) {transform:translate(5px,-50%) rotate(45deg);}
+            }
+            &.down {
+                & span:nth-child(1) {transform:translate(0px, -50%) rotate(45deg);}
+                & span:nth-child(2) {transform:translate(5px,-50%) rotate(-45deg);}
+            }
+
+            &.arrow_headline { padding-top:14px;}
+        }//arrow
+
+        /* 아코디언용 원형 up&down 버튼 */
+        .down_button {
+            width:20px;
+            position: relative;
+            .btn-icon-circle {
+                position:absolute; top:50%; transform:translateY(-50%); width:20px; height:20px; background:#fff;
+                & span:nth-child(1) {display:block; width:6px; height:1px; background:#0c0c0d; }
+                & span:nth-child(2) {display:block; width:6.5px; height:1px; background:#0c0c0d;}
+                &.up {
+                    & span:nth-child(1) {transform:translate(4px,8.5px) rotate(-45deg);}
+                    & span:nth-child(2) {transform:translate(8px,7.2px) rotate(45deg);}
+                }
+                &.down {
+                    & span:nth-child(1) {transform:translate(4px,9px) rotate(45deg);}
+                    & span:nth-child(2) {transform:translate(8px,8.4px) rotate(-45deg);}
+                }
+            }
+        }//.down_buuton
+    }//list-accordion
+
+    //교과학습 아코디언 - 성취기준별 보기
+    .code-accordion{
+      .subject_md_header_arrowbtn {margin-left:15px;}
+
+      .item{
+        .arrow-circle {
+          span:nth-child(1) {height:1px;}
+          span:nth-child(2) {height:1px;}
+          &.down span:nth-child(2) {transform: translate(11px, 11px) rotate(-45deg);}
+          &.up span:nth-child(2) {transform: translate(11px, 9px) rotate(45deg);}
+          &.down span:nth-child(1) {transform: translate(6px, 12px) rotate(45deg);}
+        }
+
+        .item_head{
+          .txt {flex-direction:column; margin-bottom:0px;
+            .title{width:100%; margin-bottom:15px;}
+          }
+        }
+        .item_body{
+          .body_head{
+            .txt{flex-direction:column;}
+            .title {width:100%;}
+            .title02{
+              width:100%;
+              font-size: 14px;
+              line-height: 21px;
+              margin-bottom: 8px;
+              letter-spacing: -0.35px;
+              font-weight: $font-weight-normal;
+              &.title02-single_button {width:100%; margin-left:0px;}
+            }
+          }
+
+        }
+      }
+    }//code-accordion
+  }//mobile

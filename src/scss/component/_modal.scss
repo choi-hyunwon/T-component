@@ -1,0 +1,160 @@
+/*
+|----------------------------------------------|
+ v.0.1 최초 공통화 작업
+ v.0.2 footer btn -> line-height 수정
+ v.0.3 - 모바일 > modal-dialog 사이즈 수정 - 한성수
+|----------------------------------------------|
+*/
+
+/*modal size*/
+.modal{
+  .modal-dialog{
+    &.modal-lg{
+      min-width: 787px;
+    .modal-content{
+        width: 787px;
+      }
+    }
+    &.modal-ml{
+      min-width: 565px;
+      .modal-content{
+        width: 565px;
+      }
+    }
+    &.modal-md{
+      min-width: 530px;
+      .modal-content{
+        width: 530px;
+      }
+    }
+    &.modal-sm{
+      min-width: 430px;
+      .modal-content{
+        width: 430px;
+      }
+    }
+  }
+}
+
+.modal-content {
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    //height: 50px;
+    position: relative;
+    background: $primary;
+    border-radius: 8px 8px 0 0;
+    border-bottom: none;
+
+    .modal-title {
+      font-size: 20px;
+      font-weight: $font-weight-normal;
+      color: #ffffff;
+      line-height:30px;
+      margin: 0 auto;
+      letter-spacing: -0.38px;
+    }
+    .close {
+      position: absolute;
+      right: 22px;
+      opacity: 1;
+      line-height: 1.9;
+      cursor:pointer;
+
+      &:hover, &:focus, &:active {
+        outline: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  .modal-body {
+    color: #666;
+    padding: 20px 30px 0;
+    font-size: 14px;
+  }
+
+  .modal-footer {
+    border: 0;
+    line-height: 90px;
+    margin: 0 auto;
+    padding: 0;
+    height: 80px;
+    justify-content:center;
+    .btn{
+      height: 40px;
+      font-size: 15px;
+      padding: 5px 20px;
+      line-height: 28px;
+      .name {
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+.modal-body{
+  .table{
+    th{
+      font-size: 14px;
+    }
+    td{
+      font-size: 14px;
+    }
+  }
+  .modal-title{
+    font-size: 16px;
+    color: #000000;
+    font-weight:$font-weight-bold;
+    margin-bottom: 8px;
+    position: relative;
+    .guid_text{
+      text-align: right;
+      font-weight: normal;
+      position: absolute;right: 0;top:3px;
+    }
+  }
+}
+
+/* 모바일 팝업 사이즈 정의*/
+.mobile {
+  .modal-dialog-centered {min-height:100%;}
+  .modal{
+    .modal-dialog{ width:100%; margin:0px;
+      .modal-header {padding:9px 20px;
+        .modal-title {font-size:16px; font-weight:$font-weight-normal; letter-spacing: -0.8px; color:white;}
+        .close {right:20px;}
+      }
+      .modal-body { /*min-height:320px;*/ padding-top:15px; padding-bottom:15px;}
+      .modal-footer {margin:0px; padding:20px;}
+      &.modal-lg{
+        min-width: 320px; margin:0 auto;
+      .modal-content{
+          width: 320px;
+        }
+      }
+      &.modal-ml{
+        min-width: 320px;  margin:0 auto;
+        .modal-content{
+          width: 320px;
+        }
+      }
+      &.modal-md{
+        min-width: 320px;  margin:0 auto;
+        .modal-content{
+          width: 320px;
+        }
+      }
+      &.modal-sm{
+        min-width: 320px;  margin:0 auto;
+        .modal-content{
+          width: 320px;
+        }
+      }
+    }
+  }
+}

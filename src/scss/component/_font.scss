@@ -1,0 +1,93 @@
+/*
+|----------------------------------|
+ v.0.1 최초 공통화 작업
+|----------------------------------|
+*/
+
+
+
+.font-h1{
+  font-size: 30px;
+  font-weight: $font-weight-normal;
+}
+.font-h2{
+  font-size: 24px;
+  font-weight: $font-weight-normal;
+}
+.font-h3{
+  font-size: 20px;
+  font-weight: $font-weight-normal;
+}
+.font-h4{
+  font-size: 18px;
+  font-weight: $font-weight-light;
+}
+
+
+.font-t1{
+  font-size: 16px;
+  font-weight: $font-weight-normal;
+}
+.font-t2{
+  font-size: 16px;
+  font-weight: $font-weight-light;
+}
+
+.mobile{
+  .font-body_heading{
+    font-weight: $font-weight-bold;
+    color:#000;
+    font-size: 24px;
+    /*letter-spacing: -0.6px*/
+    letter-spacing: -0.025em;
+  }
+  .font-body_big-1{
+    font-size:18px;
+    font-weight:$font-weight-bold;
+    color:#000;
+   /* letter-spacing: -0.45px;*/
+    letter-spacing: -0.025em;
+  }
+  .font-body_big-2{
+    font-size:16px;
+    font-weight:$font-weight-bold;
+    color:#000;
+   /* letter-spacing: -0.4px;*/
+    letter-spacing: -0.025em;
+  }
+  .font-body-1{
+    font-size:14px;
+    font-weight:$font-weight-light;
+    color:#000;
+    /*letter-spacing: -0.35px;*/
+    letter-spacing: -0.025em;
+  }
+  .font-body-2{
+    font-size:13px;
+    font-weight:$font-weight-light;
+    color:#000;
+   /* letter-spacing: -0.325px;*/
+    letter-spacing: -0.025em;
+  }
+  .font-body_small-1{
+    font-size:12px;
+    font-weight:$font-weight-light;
+    color:$gray-2;
+    /*letter-spacing: -0.3px;*/
+    letter-spacing: -0.025em;
+  }
+  .font-discription_text-1{
+    font-size:12px;
+    font-weight:$font-weight-light;
+    color:$gray-12;
+    /*letter-spacing: -0.25px;*/
+    letter-spacing: -0.025em;
+  }
+  .font-discription_text-2{
+    font-size:11px;
+    font-weight:$font-weight-light;
+    color:$gray-12;
+    /*letter-spacing: -0.25px;*/
+    letter-spacing: -0.025em;
+  }
+}

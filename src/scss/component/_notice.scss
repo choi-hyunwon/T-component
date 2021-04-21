@@ -1,0 +1,355 @@
+/*
+|----------------------------------|
+ v.0.1 최초 공통화 작업
+|----------------------------------|
+*/
+
+
+
+
+//공통게시판 등 - 동영상 play 상세보기
+.section-notice-movie {
+  margin-right: 270px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  &.full {
+    margin-right: 0;
+
+    .area-text {
+      position: relative;
+      .font-h3{
+        font-weight: $font-weight-normal;
+      }
+
+      &:after {
+        content: '';
+        width: calc(100% - 60px);
+        height: 0;
+        border-bottom: 1px solid $border-color;
+        position: absolute;
+        left: 30px;
+        bottom: 0;
+      }
+    }
+
+    .reply-box {
+      padding-top: 10px;
+
+      .title {
+        border-top: none;
+        font-weight: $font-weight-normal;
+      }
+    }
+  }
+
+  .area-movie {
+    .play-box-common {
+      border-bottom: 1px solid $border-color;
+    }
+
+    .title-wrap {
+      padding: 30px;
+      border-radius: 5px 5px 0 0;
+      border-bottom: 1px solid #ccc;
+      background: #fcfcfc;
+      font-size: 24px;
+
+      span {
+        display: block;
+        font-weight: $font-weight-bold;
+        font-size: 2.0rem;
+        color: $primary;
+      }
+    }
+
+    .play-wrap {
+      padding: 30px 30px 20px 30px;
+
+      video {
+        position: relative;
+        z-index: 10;
+        margin-bottom: 20px;
+
+        &:focus {
+          outline: 0;
+        }
+      }
+      .cultural_logo{
+        margin-bottom: 20px;
+        height: 30px;
+        display: block;
+        img{
+          height: 100%;width: 100%;
+        }
+        &:nth-of-type(1){
+          width: 64px;
+        }
+        &:nth-of-type(2){
+          width: 79px;
+        }
+        &:nth-of-type(3){
+          width: 90px;
+          margin-bottom: 0;
+        }
+      }
+
+      .nodata-box {
+        position: relative;
+        width: 694px;
+        height: 384px;
+        background: #666;
+
+        .warning {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          padding-top: 40px;
+          background: url(../img/common/ico-nodata-white.png) no-repeat 50% 0;
+          color: #fff;
+        }
+      }
+
+      .comment {
+        padding: 20px 0 15px;
+        font-size: 15px;
+        color: #666666;
+      }
+
+      .btn_wrap {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+        .btn{
+          margin: 0 0 0 5px;
+          &:first-child{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .area-text {
+    padding: 0 30px 30px;
+    font-size: 15px;
+    color: #666666;
+    .btn_wrap {
+      padding: 20px 0;
+      .btn{
+        margin: 0 0 0 5px;
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+    }
+    .font-h3{
+      color:#000;
+    }
+    .list{
+      b {
+        font-weight: $font-weight-bold;
+      }
+    }
+    .title-download {
+      margin-top: 10px;
+      font-weight: $font-weight-bold;
+    }
+    .download-list {
+      a {
+        display: block;
+        color:#666;
+      }
+    }
+
+    .meta_list {
+      margin-top: 10px;
+
+      a {
+        display: inline-block;
+        padding: 10px 18px;
+        line-height: 1;
+        background: #f0f3f7;
+        border-radius: 18px;
+        margin-right: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .btn-group-wrap {
+    margin: 0 30px;
+  }
+
+  .btn-group-line {
+  }
+}
+
+.btn-group-line {
+  .btn-group {
+    margin-right: 2px;
+  }
+
+  .btn {
+    padding: 5px 10px;
+  }
+}
+
+.section-movie-list {
+  position: absolute;
+  top: 23px;
+  right: 0;
+
+  .movie-list {
+    position: relative;
+
+    .title {
+      padding-bottom: 8px;
+      font-weight: $font-weight-bold;
+      font-size: 16px;
+
+      + {
+        .btn.btn-text {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+
+
+    .btn-prevnext {
+      position: relative;
+
+      .btn-text {
+        border-radius: 0;
+        border-bottom: 1px solid #333;
+        opacity: .5;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+
+      .next {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+video:focus {
+  outline: 0;
+}
+
+// 공통게시판 view
+.more-sliding {
+  .title-line {
+    padding: 30px 0 10px 30px;
+
+    .title {
+      display: inline-block;
+      margin-right: 15px;
+      font-weight: $font-weight-bold;
+      font-size: 16px;
+    }
+
+    .btn {
+      position: relative;
+      top: -2px;
+      height: 24px;
+
+      i {
+        width: 10px;
+      }
+    }
+  }
+
+  .play-list {
+    li {
+      float: left;
+      width: calc((100% - 60px) / 4);
+      margin-right: 20px;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+//게시판 상세 공통
+.play-list {
+
+  li {
+    width: 239px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      height: 135px;
+      background: #e0e0e0 url(../img/common/bg-thumbnail.png) no-repeat center;
+      border-radius: 5px;
+      overflow: hidden;
+
+      img {
+        position: relative;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+      }
+
+      .dim {
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+
+        .txt {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          text-align: center;
+          width: 100%;
+          padding: 25px;
+          font-size: 14px;
+          color: #fff;
+
+          span {
+            border-radius: 30px;
+            padding: 3px 15px;
+            display: inline-block;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            background: #000;
+          }
+        }
+      }
+
+      .time {
+        position: absolute;
+        right: 10px;
+        bottom: 8px;
+        font-size: 13px;
+        color: #fff;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+

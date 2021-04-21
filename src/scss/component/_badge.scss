@@ -1,0 +1,51 @@
+/*
+|----------------------------------|
+ v.0.1 최초 공통화 작업
+|----------------------------------|
+*/
+
+/* 배지 */
+.badge {
+
+    //공통 뱃지
+    font-size: 13px;
+    font-weight: $font-weight-bold;
+    letter-spacing: -0.025em;
+    border-radius: 5px;
+    padding:7px 15px;
+
+    &-priamry {
+      color: white;
+      background: $primary;
+    }
+    &-secondary {
+        color: white;
+        background: $gray-4;
+    }
+
+    //차시용 뱃지
+    &-chasi01 {
+      color: white;
+      padding: 6px 10px;
+      background: #97c5ed;
+      border-radius: 35px;
+    }
+    &-chasi02 {
+      color: white;
+      padding: 6px 10px;
+      background: #3f9ff2;
+      border-radius: 35px;
+    }
+    &-chasi03 {
+      color: white;
+      padding: 6px 10px;
+      background: #418ac9;
+      border-radius: 35px;
+    }
+    &-chasi04 {
+      color: white;
+      padding: 6px 10px;
+      background: #1d5686;
+      border-radius: 35px;
+    }
+  }
