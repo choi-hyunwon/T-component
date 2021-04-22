@@ -2,6 +2,7 @@
 |----------------------------------|
  v.0.1 최초 공통화 작업
  v.0.2 ico-new-badge 추가 - 고태윤
+ v.0.3 icon-star 와 해당 아이콘 icon-active 이미지 변경
 |----------------------------------|
 */
 
@@ -287,9 +288,11 @@
   background-image: url("../img/common/ico-calender.png");
 }
 .icon-star {
-  background-image: url("../img/common/ico-star-off.png");
+  background-image: url("../img/common/ico-favorite-defalt.png");
+  width: 25px;
+  height: 25px;
   &.icon-active{
-    background-image: url("../img/common/ico-star-on.png");
+    background-image: url("../img/common/ico-favorite-select.png");
   }
 }
 .icon-star-small {
