@@ -4,6 +4,7 @@
  v.0.2 모바일 버튼 사이즈 변경 sm -> md
  v.0.3 pc 버튼 line-height 수정
  v.0.4 모바일 버튼 line-height 수정
+ v.0.5 모바일 - .half-box - select half의 경우 추가 - 한성수
 |----------------------------------|
 */
 
@@ -333,6 +334,12 @@
       display: inline-block;
       width: calc(49.9% - 8px);
       margin: 0 4px;
+    }
+
+    select{
+      display:inline-block!important;
+      width: calc(49.9% - 8px)!important;
+      margin:0 4px!important;
     }
   }
 
