@@ -1,6 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 최초 공통화 작업
+ v.0.2 .slide-addtional - 교과 부가 이미지 슬라이드 추가 - 한성수
 |----------------------------------|
 */
 
@@ -202,6 +203,103 @@
         line-height: 19px;
         .icon {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
       }
+    }
+  }
+}
+
+.slide-additional {min-width:1100px; height:100vh; width:100%; background:#181818; overflow:hidden;
+  .add_head {padding:0px 20px; background:#222222; height:68px; display:flex; align-items: center; justify-content: space-between;
+    .title{font-size:16px; color:#fff; font-weight:$font-weight-bold; 
+      /*@include ellipsis(1);*/
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      .icon-folder-green{margin-right:10px;}
+    }
+    ._slide_show_stop{display:none;}
+    ._slide_show_exit{display:none; margin-left:2px;}
+  }
+  .add_body { height:calc(100vh - 218px); transition: height 0.5s;
+    .swiper-wrapper { background:#181818;
+      .swiper-slide { 
+        .gallery-top_img {position:relative; width:100%;height:100%; display:block; 
+          img {position:absolute; top:50%; left:50%; transforM:translate(-50%, -50%);}
+        }
+        
+      }
+    }
+    .swiper-button-prev:after {display:none;}
+    .swiper-button-next:after {display:none;}
+    .swiper-top-prev {
+      width:48px; height:48px; margin-left:30px;
+      background-image: url("../img/additional/slide_top_left.png") !important;
+      background-repeat:no-repeat;
+    }
+    
+    .swiper-top-next {
+      width:48px; height:48px; margin-right:30px;
+      background-image: url("../img/additional/slide_top_right.png") !important;
+      background-repeat:no-repeat;
+    }
+    .swiper-pagination{
+      width:100%; height:150px; position:absolute; left:50%; bottom:-150px; transform:translateX(-50%); padding-top:98px;
+      display:none; opacity: 0; background: linear-gradient(0deg, rgba(0,0,0,0.500437675070028) 0%, rgba(255,255,255,0) 100%);
+
+      .swiper-pagination-bullet {
+        width:12px; height:12px; background:white; opacity: 1; transition:width 0.2s; margin:0 10px;
+        &.swiper-pagination-bullet-active {width:24px; border-radius: 35px; }
+      }
+    }
+  }
+  .add_foot {background:#333333; padding:20px; position:relative; 
+    .add_foot_slide_wrap {height:110px; margin:0 auto;  /* max-width:1033px;*/ 
+      .swiper-wrapper {
+        .swiper-slide{
+          color:white; text-align:center; font-size:13px; font-weight:$font-weight-light;
+          .gallery-foot_img { margin-bottom:7px;
+            img{height:67px;}
+          }
+          &.current {
+            .gallery-foot_img {
+              &:after {display:block; content:""; widtH:100%; height:67px; position:absolute; top:0; left:0; border:3px solid #418ac9; }
+            }  
+          }
+          .name {
+            /* @include ellipsis(2); */ 
+            word-break: keep-all;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            word-break: keep-all;
+            
+          }
+        }
+      }
+      .thumbs-arrow {
+        width:100%; height:100%; position:absolute; bottom:0; left:0; z-index:0;
+      }
+        .swiper-button-prev:after {display:none;}
+        .swiper-button-next:after {display:none;}
+        .swiper-thumbs-prev {
+          width:40px; height:100%; left:0; top:22px; cursor: pointer; z-index:2;
+          background-color:#222222 ;
+          background-image: url("../img/additional/slide_thumbs_left.png") !important;
+          background-repeat:no-repeat;
+          background-position:center center;
+          &:focus {outline:0px;}
+        }
+        
+        .swiper-thumbs-next {
+          width:40px; height:100%; right:0; top:22px; 
+          background-color:#222222 ;
+          background-image: url("../img/additional/slide_thumbs_right.png") !important;
+          background-repeat:no-repeat;
+          background-position:center center;
+          &:focus {outline:0px;}
+        }
     }
   }
 }
