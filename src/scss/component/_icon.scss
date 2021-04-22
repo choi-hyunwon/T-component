@@ -3,6 +3,7 @@
  v.0.1 최초 공통화 작업
  v.0.2 ico-new-badge 추가 - 고태윤
  v.0.3 icon-star 와 해당 아이콘 icon-active 이미지 변경
+ v.0.4 모바일 - .icon-refresh-white 추가 - 한성수
 |----------------------------------|
 */
 
@@ -540,6 +541,9 @@
   }
   .icon-refresh {
     background-image: url("../img/m-common/ico-refresh.png");
+  }
+  .icon-refresh-white {
+    background-image: url("../img/m-common/ico-refresh-white.png");
   }
   .icon-qna {
     background-image: url("../img/m-common/ico-qna.png");
