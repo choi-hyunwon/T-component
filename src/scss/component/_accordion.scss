@@ -3,6 +3,7 @@
  v.0.1 최초 공통화 작업
  v.0.2 - 모바일 > list-accordion 수정 - 한성수
        - 모바일 > code-accordion 수정 - 한성수
+ v.0.3 - 모바일 > list-noraml 수정 - 한성수
 |----------------------------------------------|
 */
 
@@ -850,6 +851,15 @@
       }
     }
 
+    /* 아코디언 내부 리스트 컴포넌트 */
+    .section-acordion_list {
+      a { display:block; padding:20px 15px; font-size:14px; font-weight:$font-weight-light; color:#666; border-bottom:1px solid #e0e0e0;
+        &:last-of-type {border-bottom:0px;}
+        &:hover {color:$primary; font-weight:$font-weight-bold; }
+        &.active {color:$primary; font-weight:$font-weight-bold; }
+      }
+    }
+
     //교과학습 아코디언 - 단원별 보기
     .list-accordion{
         border-radius: 6px;
@@ -1086,4 +1096,45 @@
         }
       }
     }//code-accordion
+
+    //유치 교과자료 아코디언 - 차시창 모바일버전에도 쓰임 
+    .list-normal {
+      .item {
+        .arrow {width:10px; height:5.5px; 
+          &.up { 
+            span:nth-child(1) {width:7px; height:1px; }
+            span:nth-child(2) {width:7px; height:1px; transform: translate(5px, -50%) rotate(45deg);}
+          }
+          &.down { 
+            span:nth-child(1) {width:7px; height:1px; }
+            span:nth-child(2) {width:7px; height:1px; transform: translate(5px, -50%) rotate(-45deg);}
+          }
+        }
+        .arrow-circle { border:0px; width:10px; height:5.5px; margin-left:30px; flex-grow:0; position:relative;
+          span:nth-child(1) {width:7px; height:1px; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
+          span:nth-child(2) {width:7px; height:1px; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
+          &.up {
+            span:nth-child(1) {transform: translate(0px, -50%) rotate(45deg);}
+            span:nth-child(2) {transform: translate(-5px, -50%) rotate(-45deg);}
+          }
+          &.down {
+            span:nth-child(1) {transform: translate(0px, -50%) rotate(-45deg);}
+            span:nth-child(2) {transform: translate(-5px, -50%) rotate(45deg);}
+          }
+        }
+        .item_head{ padding:25px 15px;
+          .txt {
+            .title {font-size:16px; font-weight:$font-weight-normal;
+            }
+          }
+        }
+        
+        .item_body{
+          .body_head{ padding:25px 15px;
+            .title {font-size:14px; font-weight:$font-weight-normal; flex-grow:1;}
+          }
+        }
+      }
+    }//list-normal
+
   }//mobile
