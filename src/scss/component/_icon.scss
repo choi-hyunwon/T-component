@@ -2,8 +2,9 @@
 |----------------------------------|
  v.0.1 최초 공통화 작업
  v.0.2 ico-new-badge 추가 - 고태윤
- v.0.3 icon-star 와 해당 아이콘 icon-active 이미지 변경
+ v.0.3 icon-star 와 해당 아이콘 icon-active 이미지 변경 - 박선미
  v.0.4 모바일 - .icon-refresh-white 추가 - 한성수
+ v.0.5 pc - .icon-book 추가 - 박선미
 |----------------------------------|
 */
 
@@ -182,6 +183,9 @@
 }
 .icon-magic {
   background-image: url("../img/common/ico-magic.png");
+}
+.icon-book {
+  background-image: url("../img/common/ico-book.png");
 }
 .icon-memo-center {
   background-image: url("../img/common/ico-memo-center.png");
