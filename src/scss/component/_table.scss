@@ -2,6 +2,7 @@
 |----------------------------------|
  v.0.1 최초 공통화 작업
  v.0.2 no-select 추가 - 고태윤
+ v.0.3 thead tr th -> padding 10px 0.75rem 수정  - 박선미
 |----------------------------------|
 */
 
@@ -20,7 +21,7 @@ table{
         border-width: 1px;
         background: #fcfcfc;
         vertical-align: middle;
-        padding: 13px 0.75rem;
+        padding: 10px 0.75rem;
         font-weight: normal;
         font-size: 15px;
       }

@@ -1,6 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 최초 공통화 작업
+ v.0.2 .subject ,  .desc_area 추가 / list li (mb) 추가 / title-wrap 패딩수정  - 박선미
 |----------------------------------|
 */
 
@@ -49,7 +50,7 @@
     }
 
     .title-wrap {
-      padding: 30px;
+      padding:23px 30px 24px;
       border-radius: 5px 5px 0 0;
       border-bottom: 1px solid #ccc;
       background: #fcfcfc;
@@ -135,6 +136,12 @@
     padding: 0 30px 30px;
     font-size: 15px;
     color: #666666;
+    .subject{
+      font-size: 20px;
+      color:#000;
+      font-weight: $font-weight-normal;
+      margin-bottom: 16px;
+    }
     .btn_wrap {
       padding: 20px 0;
       .btn{
@@ -148,8 +155,29 @@
       color:#000;
     }
     .list{
-      b {
-        font-weight: $font-weight-bold;
+      li{
+        letter-spacing: -0.38px;
+        margin-bottom: 3px;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+        b {
+          font-weight: $font-weight-bold;
+        }
+      }
+      &.desc_area{ /*중학 - 창체 (상세보기)*/
+        padding-bottom: 25px;
+        .title-download {
+          margin-top: 0px;
+          font-weight: $font-weight-light;
+          p{
+            a{
+              display: block;
+              color:#666;
+              font-weight: $font-weight-light;
+            }
+          }
+        }
       }
     }
     .title-download {

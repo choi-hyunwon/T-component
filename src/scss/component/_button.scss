@@ -6,6 +6,7 @@
  v.0.4 모바일 버튼 line-height 수정
  v.0.5 모바일 - .half-box - select half의 경우 추가 - 한성수
  v.0.5 pc - 기본 btn border 투명처리 -박선미
+ v.0.6 pc - .btn-text 추가 -박선미
 |----------------------------------|
 */
 
@@ -59,6 +60,14 @@
     color: #323232;
     background: #fcfcfc;
     border-color: #e0e0e0;
+  }
+
+  &.btn-text {
+    display: inline-block;
+    padding: 0;
+    line-height: 20px;
+    font-size: 14px;
+    vertical-align: middle;
   }
 
   &.btn-secondary {
