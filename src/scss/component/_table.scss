@@ -3,6 +3,7 @@
  v.0.1 최초 공통화 작업
  v.0.2 no-select 추가 - 고태윤
  v.0.3 thead tr th -> padding 10px 0.75rem 수정  - 박선미
+ v.0.4 .heading-wrap -> 모바일 버전 제작 - 한성수
 |----------------------------------|
 */
 
@@ -406,5 +407,15 @@ table{
     padding: 20px 30px;
     border-top: 1px solid #ccc;
     background-color: #fff;
+  }
+}
+
+//v.0.4 .heading-wrap -> 모바일 버전 제작 - 한성수
+.mobile {
+  .heading-wrap{
+    .heading-line {padding:20px 15px; height:auto;
+      .board_total {font-size:14px; font-weight:$font-weight-light;}
+    }
+    .body-line {padding:10px 15px;}
   }
 }
