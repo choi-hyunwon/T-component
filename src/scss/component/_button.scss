@@ -7,6 +7,7 @@
  v.0.5 모바일 - .half-box - select half의 경우 추가 - 한성수
  v.0.5 pc - 기본 btn border 투명처리 -박선미
  v.0.6 pc - .btn-text 추가 -박선미
+ v.0.7 모바일 - .btn-scondary :active 추가 - 한성수
 |----------------------------------|
 */
 
@@ -278,6 +279,15 @@
     }
     &.btn-circle {
       border-radius: 16px;
+    }
+
+    //v.0.7 mobile - .btn-scondary :active 추가 - 한성수
+    &.btn-secondary {
+      background-color: white;
+      border: 1px solid #bbb;
+      color: #666;
+
+      &:active {background-color: white; border: 1px solid #bbb;}
     }
 
     /*사이즈별*/
