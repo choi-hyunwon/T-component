@@ -1,6 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 최초 공통화 작업
+ v.0.2 게시글더보기 swiper 버튼 추가 -박선미
 |----------------------------------|
 */
 
@@ -368,4 +369,66 @@
       }
     }
   }
+}
+
+
+
+//게시글더보기 swiper 버튼
+.swiper-button-next.movie_next {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/common/btn-circle-arrow-right-on.png) no-repeat center;
+
+  &:after {
+    display: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.common-view {
+    right: 18px;
+    margin-top: 0;
+    top: 60%;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 1;
+    background: url(../img/common/btn-circle-arrow-right-off.png) no-repeat center;
+  }
+}
+.swiper-button-prev.movie_prev {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/common/btn-circle-arrow-left-on.png) no-repeat center;
+
+  &:after {
+    display: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.common-view {
+    left: 18px;
+    margin-top: 0;
+    top: 60%;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 1;
+    background: url(../img/common/btn-circle-arrow-left-off.png) no-repeat center;
+  }
+}
+.movie_next.swiper-button-disabled {
+  opacity: 1;
+  background: url(../img/common/btn-circle-arrow-right-off.png) no-repeat center;
+}
+.movie_prev.swiper-button-disabled {
+  opacity: 1;
+  background: url(../img/common/btn-circle-arrow-left-off.png) no-repeat center;
 }
