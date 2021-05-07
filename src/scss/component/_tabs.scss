@@ -1,6 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 최초 공통화 작업
+ v.0.2 모바일 - .sub-tab (굵기,색상 변경) - 박선미
 |----------------------------------|
 */
 
@@ -594,10 +595,12 @@
       color: $gray-12;
       letter-spacing: -0.325px;
       text-align: center;
+      font-weight: $font-weight-light;
 
       &.active {
         border-radius: 18px;
         padding: 7px 15px;
+        color:$primary;
       }
     }
   }

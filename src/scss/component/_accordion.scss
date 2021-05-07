@@ -4,6 +4,7 @@
  v.0.2 - 모바일 > list-accordion 수정 - 한성수
        - 모바일 > code-accordion 수정 - 한성수
  v.0.3 - 모바일 > list-noraml 수정 - 한성수
+ v 0.4 - 모바일 > .column-grid 안에 .title 사이즈,.title_subject 자간 수정 - 박선미
 |----------------------------------------------|
 */
 
@@ -844,8 +845,11 @@
           th{display:none;}
           td{display:none; border-top:0px; padding:14px 0px;}
           .title {display:flex;
+            font-size: 14px;
             .icon {width:15px; margin-top:5px; margin-right:10px;}
-            .title_subject {width:calc(100% - 15px);}
+            .title_subject {width:calc(100% - 15px);
+              letter-spacing: -0.35px;
+              word-break: keep-all;}
           }
         }
       }
@@ -1097,15 +1101,15 @@
       }
     }//code-accordion
 
-    //유치 교과자료 아코디언 - 차시창 모바일버전에도 쓰임 
+    //유치 교과자료 아코디언 - 차시창 모바일버전에도 쓰임
     .list-normal {
       .item {
-        .arrow {width:10px; height:5.5px; 
-          &.up { 
+        .arrow {width:10px; height:5.5px;
+          &.up {
             span:nth-child(1) {width:7px; height:1px; }
             span:nth-child(2) {width:7px; height:1px; transform: translate(5px, -50%) rotate(45deg);}
           }
-          &.down { 
+          &.down {
             span:nth-child(1) {width:7px; height:1px; }
             span:nth-child(2) {width:7px; height:1px; transform: translate(5px, -50%) rotate(-45deg);}
           }
@@ -1128,7 +1132,7 @@
             }
           }
         }
-        
+
         .item_body{
           .body_head{ padding:25px 15px;
             .title {font-size:14px; font-weight:$font-weight-normal; flex-grow:1;}
