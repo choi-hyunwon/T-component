@@ -3,6 +3,7 @@
  v.0.1 최초 공통화 작업
  v.0.2 모바일 sub-select 추가 (border없는 select) - 선미
  v.0.3 모바일 sub-select height 변경 - 성수
+ v.0.4 pc - TP2-58 체크박스 아이콘 무늬 제거 - 선미
 |----------------------------------|
 */
 
@@ -199,8 +200,9 @@ select::-ms-expand {
     border-color: #ccc;
   }
 
+  /*TP2-58 체크박스 아이콘 무늬 제거*/
   .custom-control-input:disabled:checked ~ .custom-control-label::after {
-    background: url(../img/common/bg-checkbox.png);
+    background: url(../img/common/bg-checkbox.png) no-repeat 50% 50%;;
   }
 }
 

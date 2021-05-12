@@ -5,6 +5,7 @@
        - 모바일 > code-accordion 수정 - 한성수
  v.0.3 - 모바일 > list-noraml 수정 - 한성수
  v 0.4 - 모바일 > .column-grid 안에 .title 사이즈,.title_subject 자간 수정 - 박선미
+ v 0.5 - 모바일 >  .list-accordion 안에 overflow: hidden 추가 / .column-grid .title 안에 icon(마진제거),title_subject(마진추가) - 박선미
 |----------------------------------------------|
 */
 
@@ -846,10 +847,14 @@
           td{display:none; border-top:0px; padding:14px 0px;}
           .title {display:flex;
             font-size: 14px;
-            .icon {width:15px; margin-top:5px; margin-right:10px;}
-            .title_subject {width:calc(100% - 15px);
+            .icon {width:16px; margin-top:5px; margin-right:0px;
+              +.title_subject{
+                margin-left: 8px;
+              }}
+            .title_subject {width:calc(100% - 26px);
               letter-spacing: -0.35px;
-              word-break: keep-all;}
+              word-break: keep-all;
+            }
           }
         }
       }
@@ -867,6 +872,7 @@
     //교과학습 아코디언 - 단원별 보기
     .list-accordion{
         border-radius: 6px;
+        overflow: hidden;
 
         /*** list-accordion 내부 컴포넌트 ***/
 
