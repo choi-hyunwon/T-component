@@ -5,6 +5,7 @@
  v.0.3 icon-star 와 해당 아이콘 icon-active 이미지 변경 - 박선미
  v.0.4 모바일 - .icon-refresh-white 추가 - 한성수
  v.0.5 pc - .icon-book 추가 - 박선미
+ v.0.6 pc - .icon-img-gray 추가 - 고태윤
 |----------------------------------|
 */
 
@@ -385,6 +386,9 @@
 }
 .icon-img {
   background-image: url("../img/common/ico-img.png");
+}
+.icon-img-gray{
+  background-image: url("../img/common/ico-img-gray.png");
 }
 .icon-hangle {
   background-image: url("../img/common/ico-hangle.png");
