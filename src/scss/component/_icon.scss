@@ -6,6 +6,7 @@
  v.0.4 모바일 - .icon-refresh-white 추가 - 한성수
  v.0.5 pc - .icon-book 추가 - 박선미
  v.0.6 pc - .icon-img-gray 추가 - 고태윤
+ v.0.7 pc - .icon-question-sm 추가 - 박선미
 |----------------------------------|
 */
 
@@ -333,6 +334,9 @@
 }
 .icon-question {
   background-image: url("../img/common/ico-question.png");
+}
+.icon-question-sm {
+  background-image: url("../img/common/ico-question-sm.png");
 }
 .icon-trash {
   background-image: url("../img/common/ico-trash.png");
