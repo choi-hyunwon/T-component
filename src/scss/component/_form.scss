@@ -5,6 +5,7 @@
  v.0.3 모바일 sub-select height 변경 - 성수
  v.0.4 pc - TP2-58 체크박스 아이콘 무늬 제거 - 선미
  v.0.5 모바일 - 체크박스 아이폰 이슈(-webkit-appearance: none;) - 선미
+ v.0.6 모바일 - 체크박스 아이폰 이슈(-webkit-appearance: none;) 위치이동 - 선미
 |----------------------------------|
 */
 
@@ -22,7 +23,6 @@ input::-ms-clear {
   display:none!important;
 }
 input {
-  -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
 
@@ -508,6 +508,11 @@ textarea.form-control {
 
 
 .mobile{
+
+  input {
+    -webkit-appearance: none;
+  }
+
   /*input*/
     input[type="text"],
     input[type="password"],
