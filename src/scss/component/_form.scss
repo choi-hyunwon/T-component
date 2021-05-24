@@ -6,6 +6,7 @@
  v.0.4 pc - TP2-58 체크박스 아이콘 무늬 제거 - 선미
  v.0.5 모바일 - 체크박스 아이폰 이슈(-webkit-appearance: none;) - 선미
  v.0.6 모바일 - 체크박스 아이폰 이슈(-webkit-appearance: none;) 위치이동 - 선미
+ v.0.7 모바일 - 체크박스 체크이미지 수정(아이폰 이슈) - 선미
 |----------------------------------|
 */
 
@@ -689,6 +690,12 @@ textarea.form-control {
         }
       }
     }
+    /*----------절대 지우지 마세요~ (체크박스 기본 체크이미지 변경)----------------*/
+    .custom-control-input:checked~.custom-control-label::after{
+      background: $primary url("../img/m-common/bg-checkbox.png") no-repeat center center/ 11px 7.5px;
+    }
+    /*--------------------------------------------------------------------*/
+
     .custom-control-label {
       padding-left: 32px;
       font-size: 14px;
@@ -709,17 +716,9 @@ textarea.form-control {
         border-radius: 3px;
         top: 50%;
         transform: translateY(-50%);
-        background: url("../img/m-common/bg-checkbox.png") no-repeat center center/ 11px 7.5px;
+        background: url("../img/m-common/bg-checkbox.png") no-repeat center center/ 11px 7.5px;;
       }
     }
-
-    /*----------절대 지우지 마세요~ (체크박스 기본 체크이미지 변경)----------------*/
-    .custom-control-input:checked~.custom-control-label::before{
-      background: $primary url("../img/m-common/bg-checkbox.png") no-repeat center center/ 11px 7.5px;}
-    .custom-control-input:checked~.custom-control-label::after{
-      background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
-    }
-    /*--------------------------------------------------------------------*/
   }
 
 
