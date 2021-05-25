@@ -7,6 +7,7 @@
  v.0.5 모바일 - 체크박스 아이폰 이슈(-webkit-appearance: none;) - 선미
  v.0.6 모바일 - 체크박스 아이폰 이슈(-webkit-appearance: none;) 위치이동 - 선미
  v.0.7 모바일 - 체크박스 체크이미지 수정(아이폰 이슈) - 선미
+ v.0.8 모바일 - 첨부파일 삭제버튼(공통)추가 - 선미
 |----------------------------------|
 */
 
@@ -789,4 +790,40 @@ textarea.form-control {
       border-color : $gray-6;
     }
   }
+
+
+  //첨부파일 삭제버튼(공통)
+  .delete-upload {
+    width: 12px;
+    height: 12px;
+    background: #999;
+    border: 1px solid #999;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 9px;
+      background: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 9px;
+      background: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+
+
+
 }
