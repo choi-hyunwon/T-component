@@ -9,6 +9,7 @@
  v.0.6 pc - .btn-text 추가 -박선미
  v.0.7 모바일 - .btn-scondary :active 추가 - 한성수
  v.0.8 모바일 - .btn > icon {vertical-align: sub;} 수정 - 한성수
+ v.0.9 모바일 - .half-box 마진여백 변경 - 한성수
 |----------------------------------|
 */
 
@@ -348,7 +349,7 @@
   }
   .half-box {
     width: calc(100% + 8px);
-    margin: 0 -4px;
+    margin: 0 -8px;
     font-size: 0;
 
     .btn {
