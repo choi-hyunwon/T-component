@@ -155,6 +155,7 @@
           .sub_item .show{
             border-bottom:1px solid #e0e0e0;
           }
+          .sub_item:last-of-type .show{border-bottom:0px;}
           // 아코디언 탭버전
           .body_contents_tabs {
 
