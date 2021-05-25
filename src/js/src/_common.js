@@ -113,7 +113,7 @@ $(document).ready(function () {
   $('.list-accordion .item:last-child .item_body.collapse').on('show.bs.collapse', function(event){
     $('.list-accordion .item:last-child .item_head').css('border-bottom-left-radius','0px');
     $('.list-accordion .item:last-child .item_head').css('border-bottom-right-radius','0px');
-    $('.item_body').css('border-bottom','0px solid #e0e0e0');
+    $('.list-accordion .item:last-child .item_body').css('border-bottom','0px solid #e0e0e0');
     $('.list-accordion').css('border-bottom','1px solid #e0e0e0');
     event.stopPropagation();
   }).on('hide.bs.collapse', function(event){
