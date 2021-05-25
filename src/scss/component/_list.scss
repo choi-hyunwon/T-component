@@ -1,6 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 최초 공통화 작업
+ v.0.2 list-grid-thumbnail-board > text_box 패딩 수정(TP2-962) - 박선미
 |----------------------------------|
 */
 
@@ -146,7 +147,7 @@
                 border-bottom-left-radius: 0px;  border-bottom-right-radius: 0px; text-align:center; overflow: hidden;
                 &>img{width:100%; height:100%; }
             }
-            .text_box {display:block; padding:10px;background-color: #fff; border-radius: 6px; border-top-left-radius: 0px;  border-top-right-radius: 0px;}
+            .text_box {display:block; padding:15px;background-color: #fff; border-radius: 6px; border-top-left-radius: 0px;  border-top-right-radius: 0px;}
             .title {margin-bottom:8px; font-size:15px; font-weight:$font-weight-light; margin-top:0px; min-height:44px; max-height:44px; overflow:hidden;
                 word-break: break-all;
                 overflow: hidden;
