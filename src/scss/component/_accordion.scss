@@ -10,6 +10,8 @@
  v 0.7 - 모바일 > .list-accordion .item:last-child .item_head {border-bottom: none} - 박선미
  v 0.8 - pc > .list-accordion .item_body  {border-color #cccccc;} 수정 - 박선미
  v 0.9 - pc > .list-accordion last .item border-radius 추가 - 한성수
+ v 1.0 - pc > .list-accordion .item .item_body .sub_item 마지막 라인 제거
+ v 1.1 - m > .list-accordion border-radius 10px 로 변경 - 한성수
 |----------------------------------------------|
 */
 
@@ -877,7 +879,7 @@
 
     //교과학습 아코디언 - 단원별 보기
     .list-accordion{
-        border-radius: 6px;
+        border-radius: 10px;
         overflow: hidden;
 
         /*** list-accordion 내부 컴포넌트 ***/
