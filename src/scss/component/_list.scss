@@ -1,7 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 최초 공통화 작업
- v.0.2 list-grid-thumbnail-board > text_box 패딩 수정(TP2-962) - 박선미
+ v.0.2 list-grid-thumbnail-board > item (border-radius 수정) > text_box (padding 수정) (TP2-962) - 박선미
 |----------------------------------|
 */
 
@@ -136,7 +136,7 @@
 /* 4열(게시판형) */
 .list-grid-thumbnail-board{
     margin:-15px responsive_width(-10) 0;
-    .item {float:left; width:responsive_width(199.5); margin:15px responsive_width(10); border-radius: 5px; border:solid 0.5px #e4e4e4; position:relative;
+    .item {float:left; width:responsive_width(199.5); margin:15px responsive_width(10); border-radius: 6px; border:solid 0.5px #e4e4e4; position:relative;
         &:last-child{margin-right:0px;}
         .link {width:100%; display:block;
             .img {
