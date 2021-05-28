@@ -7,6 +7,7 @@
  v.0.5 pc - .icon-book 추가 - 박선미
  v.0.6 pc - .icon-img-gray 추가 - 고태윤
  v.0.7 pc - .icon-question-sm 추가 - 박선미
+ v.0.8 pc - 메인페이지 아이콘 사이즈 고정 제거 - 박선미
 |----------------------------------|
 */
 
@@ -355,20 +356,15 @@
 /*메인페이지 아이콘*/
 .icon-instagram {
   background-image: url("../img/home/ico-instagram.png");
-  background-size: 15px 15px;
-
 }
 .icon-blog {
   background-image: url("../img/home/ico-blog.png");
-  background-size: 15px 15px;
 }
 .icon-facebook {
   background-image: url("../img/home/ico-facebook.png");
-  background-size: 15px 15px;
 }
 .icon-youtube {
   background-image: url("../img/home/ico-youtube.png");
-  background-size: 15px 15px;
 }
 
 
