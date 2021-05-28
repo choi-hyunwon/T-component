@@ -12,6 +12,7 @@
  v 0.9 - pc > .list-accordion last .item border-radius 추가 - 한성수
  v 1.0 - pc > .list-accordion .item .item_body .sub_item 마지막 라인 제거
  v 1.1 - m > .list-accordion border-radius 10px 로 변경 - 한성수
+ v 1.2 - pc > .list-accordion .item .item_body .body_head .buttons .buttons_box a  / .title02-single_button / .title02-single_button - 한성수
 |----------------------------------------------|
 */
 
@@ -122,12 +123,14 @@
           .buttons{
             flex-grow: 0; display:flex;
             .buttons_box{display:inline-block; margin-right:2px;
-              a {display:inline-block; margin-right:2px;}
+              a {display:inline-block; margin-right:2px; display:flex; align-items:center; 
+                .name {margin-left:3px;}
+              }
               &:last-child{margin-right:0px;}
             }
           }
           .title02 {width:480px; margin-left:5px; font-weight:$font-weight-light; letter-spacing: -0.025em; font-size:18px; word-break:keep-all;
-            &.title02-single_button {width:600px;}
+            &.title02-single_button {width:599px;}
           }
         }
         .body_contents {
