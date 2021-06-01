@@ -2,6 +2,7 @@
 |----------------------------------|
  v.0.1 최초 공통화 작업
  v.0.2 list-grid-thumbnail-board > item (border-radius 수정) > text_box (padding 수정) / .heart 위치 변경 (TP2-962) - 박선미
+ v.0.2 pc- list-grid-thumbnail > item (margin 8.67px -> 8.66px 수정) ie작업 - 박선미
 |----------------------------------|
 */
 
@@ -104,7 +105,7 @@
 /* 4열(베이직) */
 .list-grid-thumbnail{
     margin:-15px 0px;
-    .item {float:left; width:237px; margin:15px 8.67px; /*border-radius: 10px; border:solid 0.5px #e4e4e4;*/
+    .item {float:left; width:237px; margin:15px 8.66px; /*border-radius: 10px; border:solid 0.5px #e4e4e4;*/
       background: #fff;
         &:first-of-type{margin-left:0px;}
         &:last-of-type{margin-right:0px;}
