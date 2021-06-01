@@ -2,7 +2,8 @@
 |----------------------------------|
  v.0.1 최초 공통화 작업
  v.0.2 list-grid-thumbnail-board > item (border-radius 수정) > text_box (padding 수정) / .heart 위치 변경 (TP2-962) - 박선미
- v.0.2 pc- list-grid-thumbnail > item (margin 8.67px -> 8.66px 수정) ie작업 - 박선미
+ v.0.3 border:0.5px -> 1px - 한서수
+ v.0.4 pc- list-grid-thumbnail > item (margin 8.67px -> 8.66px 수정) ie작업 - 박선미
 |----------------------------------|
 */
 
@@ -137,7 +138,7 @@
 /* 4열(게시판형) */
 .list-grid-thumbnail-board{
     margin:-15px responsive_width(-10) 0;
-    .item {float:left; width:responsive_width(199.5); margin:15px responsive_width(10); border-radius: 6px; border:solid 0.5px #e4e4e4; position:relative;
+    .item {float:left; width:responsive_width(199.5); margin:15px responsive_width(10); border-radius: 6px; border:1px solid #e4e4e4; position:relative;
         &:last-child{margin-right:0px;}
         .link {width:100%; display:block;
             .img {
@@ -183,7 +184,7 @@
 /* 3열(게시판형) */
 .list-grid-thumbnail-board-3{
     margin:-15px -15px 0;
-    .item {float:left; width:30.67%; margin:15px 14px; border-radius: 5px; border:solid 0.5px #e4e4e4; position:relative;
+    .item {float:left; width:30.67%; margin:15px 14px; border-radius: 5px; border:1px solid #e4e4e4; position:relative;
 
         .link {width:100%; display:block;
             .img {
@@ -262,7 +263,7 @@
         .cate {padding:20px 20px 0px; font-size:14px;
           .notice {display:inline-block; margin-right:8px;}
         }
-        .title {width:100%; font-size:16px; border-bottom:0.5px solid #e0e0e0; margin-bottom:0px; padding:0px 20px 20px; display:inline-block; min-height:auto!important; max-height:100%; overflow:visible; text-overflow:initial; word-break: keep-all;
+        .title {width:100%; font-size:16px; border-bottom:1px solid #e0e0e0; margin-bottom:0px; padding:0px 20px 20px; display:inline-block; min-height:auto!important; max-height:100%; overflow:visible; text-overflow:initial; word-break: keep-all;
           .icon-clip {margin-left:7px;}
           .thumbnail-img {margin-left:7px;}
         }

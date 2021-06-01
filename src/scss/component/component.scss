@@ -1,6 +1,6 @@
 /*
 |-----------------------------------------------------------------------|
-|    컨퍼넌트 공통관리 버전 :  v1.0.25
+|    컨퍼넌트 공통관리 버전 :  v1.0.27
 |
 |    [history]
 |     - v1.0.1 : 한성수 : 슬라이드, 아이콘, 아코디언, 버튼, 모달, 유틸 추가
@@ -27,7 +27,9 @@
 |     - v1.0.22 : 박선미 : 메인페이지 아이콘 사이즈 고정 제거
 |     - v1.0.23 : 한성수 : accordion.scss > .list-accordion 변경
 |     - v1.0.24 : 박선미 : icon-basket 아이콘 사이즈 고정 제거
-|     - v1.0.25 : 박선미 : list-grid-thumbnail > item (margin 8.67px -> 8.66px 수정) ie작업
+|     - v1.0.25 : 한성수 : list.scss -> item border:0.5px -> 1px 변경
+|     - v1.0.26 : 한성수 : loign.scss 생성
+|     - v1.0.27 : 박선미 : list-grid-thumbnail > item (margin 8.67px -> 8.66px 수정) ie작업
 |-----------------------------------------------------------------------|
 */
 
@@ -58,6 +60,6 @@
 @import "accordion";
 @import "font";
 @import "badge";
-
+@import "login";
 
 @import "../lib/jquery.mCustomScrollbar";
