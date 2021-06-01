@@ -2,6 +2,7 @@
 |----------------------------------|
  v.0.1 최초 공통화 작업
  v.0.2 .slide-addtional - 교과 부가 이미지 슬라이드 추가 - 한성수
+ v.0.3 tp2-1024 수정 
 |----------------------------------|
 */
 
@@ -16,7 +17,7 @@
           & img {vertical-align: top;}
         }
         .img {width:180px; background:brown; border-radius: 4px; overflow:hidden; margin:0 0px; padding:0 0px;}
-        .name {margin-top:15px; display:block; height:45px;
+        .name {margin-top:15px; display:block; max-height:45px; //tp2-1024
             word-break: keep-all;
             overflow: hidden;
             text-overflow: ellipsis;
