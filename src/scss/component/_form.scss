@@ -8,6 +8,7 @@
  v.0.6 모바일 - 체크박스 아이폰 이슈(-webkit-appearance: none;) 위치이동 - 선미
  v.0.7 모바일 - 체크박스 체크이미지 수정(아이폰 이슈) - 선미
  v.0.8 모바일 - 첨부파일 삭제버튼(공통)추가 - 선미
+ v.0.9 모바일 - .sub-select 이미지 변경 - 성수
 |----------------------------------|
 */
 
@@ -568,7 +569,7 @@ textarea.form-control {
         color:#000;
       }
       &.sub-select{
-        background:  url(../img/common/ico-arrow-bottom-black-big.png) no-repeat right 53%;
+        background:  url(../img/m-common/ico-select_arrow.png) no-repeat right 53%;
         background-size: 11px 6px;
         border: none;
         min-width: auto;
