@@ -9,6 +9,7 @@
  v.0.7 pc - .icon-question-sm 추가 - 박선미
  v.0.8 pc - 메인페이지 아이콘 사이즈 고정 제거 - 박선미
  v.0.9 pc - .icon-basket 아이콘 사이즈 고정 제거 - 박선미
+ v.0.10 pc - icon-gnb-search / icon-search-remove 디자인 변경에 따른 아이콘 변경 -박선미
 |----------------------------------|
 */
 
@@ -443,13 +444,20 @@
 /*----유치 사용---*/
 .icon-gnb-search {
   background-image: url("../img/common/ico-gnb-search.png");
-  width: 32px!important;
-  height: 32px!important;
+  /* 디자인 변경으로 인한 이미지 / 사이즈 변경
+    width: 32px!important;
+    height: 32px!important;*/
+  width: 36px;
+  height: 36px;
+
 }
 .icon-search-remove {
   background-image: url("../img/common/ico-search-remove.png");
-  width: 36px!important;
-  height: 36px!important;
+  /* 디자인 변경으로 인한 이미지 / 사이즈 변경
+    width: 36px!important;
+    height: 36px!important;*/
+  width: 12px;
+  height: 12px;
 }
 .icon-login-arrow-right {
   background-image: url("../img/common/ico-login-arrow-right.png");
