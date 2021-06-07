@@ -15,6 +15,7 @@
  v 1.2 - pc > .list-accordion .item .item_body .body_head .buttons .buttons_box a  / .title02-single_button / .title02-single_button - 한성수
  v 1.3 - pc > tp2-1024 - 한성수
  v 1.4 - .latest_pop -> z-index 변경 - 한성수
+ v 1.5 - pc > .popup-accordion (border color #e0e0e0 -> #cccccc변경) - 박선미
 |----------------------------------------------|
 */
 
@@ -125,7 +126,7 @@
           .buttons{
             flex-grow: 0; display:flex;
             .buttons_box{display:inline-block; margin-right:2px;
-              a {display:inline-block; margin-right:2px; display:flex; align-items:center; 
+              a {display:inline-block; margin-right:2px; display:flex; align-items:center;
                 .name {margin-left:3px;}
               }
               &:last-child{margin-right:0px;}
@@ -340,7 +341,7 @@
   }
 
   .popup-accordion {
-    border-radius:10px; border:1px solid #e0e0e0;
+    border-radius:10px; border:1px solid #cccccc;
     margin-bottom: 20px;
     overflow-y: auto;
     height: 340px;
