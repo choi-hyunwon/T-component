@@ -2,6 +2,7 @@
 |----------------------------------|
  v.0.1 최초 공통화 작업
  v.0.2 모바일 - 페이지네이션 추가
+ v.0.3 모바일 - 페이지네이션 간격 수정(TP2-1108)
 |----------------------------------|
 */
 
@@ -123,10 +124,11 @@
 
 .mobile {
   .pagination{ margin:30px 0px 80px;
-    .page-item{width:32px; height:32px;
+    .page-item{width:32px; height:32px;line-height: 28px;
       .page-link{font-size:14px; width:32px; height:32px; }
       &.active{
-        .page-link {line-height:27px; margin:0px;}
+        .page-link {line-height:28px; margin:0px;
+          padding-right: 0}
       }
 
       &.next {margin-left:25px;}
