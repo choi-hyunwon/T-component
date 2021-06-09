@@ -9,6 +9,7 @@
  v.0.7 모바일 - 체크박스 체크이미지 수정(아이폰 이슈) - 선미
  v.0.8 모바일 - 첨부파일 삭제버튼(공통)추가 - 선미
  v.0.9 모바일 - .sub-select 이미지 변경 - 성수
+ v.0.10 pc - TP2-817 필수입력값 수정시 색상수정 (부트스트랩 - .was-validated) - 선미
 |----------------------------------|
 */
 
@@ -55,6 +56,28 @@ input[type="email"]:focus {
   border-color: $border-color;
   outline: 0;
   box-shadow: none;
+}
+
+/*TP2-817 필수입력값 색상수정*/
+.was-validated{
+  .form-control{
+    &:valid, &.is-valid{
+      background-image: none !important;
+      border-color: #000;
+    }
+    &:invalid:focus, &.is-invalid:focus{
+      box-shadow: none;
+    }
+    &:valid:focus, &.is-valid:focus{
+      box-shadow: none;
+    }
+  }
+  .custom-control-input:valid ~ .custom-control-label, .custom-control-input.is-valid ~ .custom-control-label{
+    color:#000;
+  }
+  .custom-control-input:valid ~ .custom-control-label::before, .custom-control-input.is-valid ~ .custom-control-label::before{
+    color:#000;
+  }
 }
 
 // select
