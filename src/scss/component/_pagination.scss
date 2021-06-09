@@ -2,7 +2,8 @@
 |----------------------------------|
  v.0.1 최초 공통화 작업
  v.0.2 모바일 - 페이지네이션 추가
- v.0.3 모바일 - 페이지네이션 간격 수정(TP2-1108)
+ v.0.3 모바일(선미)  - 페이지네이션 간격 수정(TP2-1108)
+ v.0.3 모바일(선미) - 페이지네이션 이미지 교체(TP2-1108)
 |----------------------------------|
 */
 
@@ -128,11 +129,68 @@
       .page-link{font-size:14px; width:32px; height:32px; }
       &.active{
         .page-link {line-height:28px; margin:0px;
-          padding-right: 0}
+          padding-right: 0;
+          font-weight: bold;
+        }
       }
-
-      &.next {margin-left:25px;}
-      &.prev {margin-right:25px;}
+      &.prev{
+        margin-right:25px;
+        a{
+          font-size: 0;
+          background: url("../img/m-common/ico-pagination-prev.png") no-repeat center center;
+          background-size: 5.5px 10px;
+        }
+        &.disabled{
+          a{
+            background: url("../img/m-common/ico-pagination-prev-disabled.png") no-repeat  center center;
+            background-size: 5.5px 10px;
+          }
+        }
+      }
+      &.next{
+        margin-left:25px;
+        a{
+          font-size: 0;
+          background: url("../img/m-common/ico-pagination-next.png") no-repeat  center center;
+          background-size: 5.5px 10px;
+        }
+        &.disabled{
+          a{
+            background: url("../img/m-common/ico-pagination-next-disabled.png") no-repeat  center center;
+            background-size: 5.5px 10px;
+          }
+        }
+      }
+      &.first {
+        height: 24px;
+        font-size: 0;
+        a{
+          font-size: 0;
+          background: url("../img/m-common/ico-pagination-first.png") no-repeat center center;
+          background-size: 11px 10px;
+        }
+        &.disabled{
+          a{
+            background: url("../img/m-common/ico-pagination-first-disabled.png") no-repeat  center center;
+            background-size: 11px 10px;
+          }
+        }
+      }
+      &.last{
+        height: 24px;
+        font-size: 0;
+        a{
+          font-size: 0;
+          background: url("../img/m-common/ico-pagination-last.png") no-repeat center center;
+          background-size: 11px 10px;
+        }
+        &.disabled{
+          a{
+            background: url("../img/m-common/ico-pagination-last-disabled.png") no-repeat  center center;
+            background-size: 11px 10px;
+          }
+        }
+      }
     }
   }
 }
