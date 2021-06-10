@@ -10,6 +10,7 @@
  v.0.8 모바일 - 첨부파일 삭제버튼(공통)추가 - 선미
  v.0.9 모바일 - .sub-select 이미지 변경 - 성수
  v.0.10 pc - TP2-817 필수입력값 수정시 색상수정 (부트스트랩 - .was-validated) - 선미
+ v.0.11 모바일 - input 클릭시 outline제거 (tp2-812) - 태윤
 |----------------------------------|
 */
 
@@ -540,39 +541,41 @@ textarea.form-control {
   }
 
   /*input*/
-    input[type="text"],
-    input[type="password"],
-    input[type="tel"],
-    input[type="number"],
-    input[type="email"]{
-      height: 46px;
-      min-width: 92px;
-      border-radius: 6px;
-      &::placeholder {
-        font-size: 14px;
-        letter-spacing: -0.35px;
-        color: $gray-16;
-        font-weight: $font-weight-light;
-      }
-      &:disabled{
-        background: $gray-15;
-        color: $gray-16;
-      }
-      &:focus{
-        color:#000;
-        border: 1px solid #000;
-      }
-      &.error{
-        border: 1px solid $red;
-      }
-      &.fill{
-        border: 1px solid #000;
-        color:#000;
-      }
+  input[type="text"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="email"]{
+    height: 46px;
+    min-width: 92px;
+    border-radius: 6px;
+    &::placeholder {
+      font-size: 14px;
+      letter-spacing: -0.35px;
+      color: $gray-16;
+      font-weight: $font-weight-light;
     }
+    &:disabled{
+      background: $gray-15;
+      color: $gray-16;
+    }
+    //tp2-812 outline 제거
+    &:focus{
+      //color:#000;
+      //border: 1px solid #000;
+      outline:none;
+    }
+    &.error{
+      border: 1px solid $red;
+    }
+    &.fill{
+      border: 1px solid #000;
+      color:#000;
+    }
+  }
 
-   /*select*/
-   select {
+  /*select*/
+  select {
     &.form-control{
       min-width: 92px;
       border-radius: 6px;
@@ -607,8 +610,8 @@ textarea.form-control {
     }
   }
 
-   /*textarea*/
-   textarea{
+  /*textarea*/
+  textarea{
     &.form-control{
       &::placeholder {
         font-size: 14px;
@@ -654,11 +657,11 @@ textarea.form-control {
         &:disabled{
           +.btn{
             .icon-search{
-                background: url(../img/m-common/ico-input-search-disabled.png) no-repeat 95% center / 20px auto;
-                width: 20px;
-                height: 20px;
-                margin-right: 0;
-              }
+              background: url(../img/m-common/ico-input-search-disabled.png) no-repeat 95% center / 20px auto;
+              width: 20px;
+              height: 20px;
+              margin-right: 0;
+            }
           }
         }
       }
@@ -687,7 +690,7 @@ textarea.form-control {
 
   }
 
- /*체크박스*/
+  /*체크박스*/
   .custom-checkbox {
     display: inline-block;
     padding: 0;
@@ -748,7 +751,7 @@ textarea.form-control {
 
 
 
-/*라디오버튼*/
+  /*라디오버튼*/
 
   // radio
   .custom-radio {
