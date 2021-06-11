@@ -126,7 +126,8 @@ $(document).ready(function () {
 
   /* debug 93 */
   $('.item:last-child .item_body').on('show.bs.collapse', function(event){
-    $('.item:last-child .item_head').css('border-bottom','1px solid #e0e0e0');
+    //TP2-1021 팝업아코디언 item-head border-bottom color변경
+    $('.item:last-child .item_head').css('border-bottom','1px solid #ccc');
   });
 
 
