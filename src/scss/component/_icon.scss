@@ -10,6 +10,7 @@
  v.0.8 pc - 메인페이지 아이콘 사이즈 고정 제거 - 박선미
  v.0.9 pc - .icon-basket 아이콘 사이즈 고정 제거 - 박선미
  v.0.10 pc - icon-gnb-search / icon-search-remove 디자인 변경에 따른 아이콘 변경 -박선미
+ v.0.11 pc - .arrow-circle 수정 - 한성수
 |----------------------------------|
 */
 
@@ -37,7 +38,7 @@
 
   & span:nth-child(1) {
     display: block;
-    width: 6px;
+    width: 7px;
     height: 2px;
     background: #0c0c0d;
   }
