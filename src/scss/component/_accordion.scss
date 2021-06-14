@@ -17,6 +17,7 @@
  v 1.4 - .latest_pop -> z-index 변경 - 한성수
  v 1.5 - popup-accordion itemhead - 한성수
  v 1.6 - &.title_single {margin-bottom:0px;} 추가 - 한성수
+ v 1.7 - .subject-accrodion 추가 - 한성수
 |----------------------------------------------|
 */
 
@@ -60,6 +61,23 @@
 
   .list-accordion {
     border-radius:10px; border:1px solid #cccccc;
+    &.subject-accordion {
+      .item {
+        &:last-child { overflow:visible;
+          .item_body {
+            .item_body_item:last-of-type{
+              .body_contents{
+                .accordion_block:last-of-type {
+                  .contests_head {border:1px solid red; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
+                  .contents_body {border:1px solid red; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
+                }
+              }  
+            }
+            
+          }
+        }
+      }
+    }
     .item {
       &:first-child .item_head {border-top-left-radius: 10px; border-top-right-radius: 10px;}
       &:last-child .item_head{border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
