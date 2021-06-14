@@ -889,6 +889,7 @@
             .title_subject {width:calc(100% - 26px);
               letter-spacing: -0.35px;
               word-break: keep-all;
+              line-height:20px;
             }
           }
         }
@@ -901,6 +902,13 @@
         &:last-of-type {border-bottom:0px;}
         &:hover {color:$primary; font-weight:$font-weight-bold; }
         &.active {color:$primary; font-weight:$font-weight-bold; }
+      }
+    }
+
+
+    .table-subject {
+      colgroup {
+        col {width:100%!important;}
       }
     }
 
