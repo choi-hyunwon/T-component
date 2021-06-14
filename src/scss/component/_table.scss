@@ -4,6 +4,7 @@
  v.0.2 no-select 추가 - 고태윤
  v.0.3 thead tr th -> padding 10px 0.75rem 수정  - 박선미
  v.0.4 .heading-wrap -> 모바일 버전 제작 - 한성수
+ v.0.5 .birthday_box -> .day -> margin값 변경 (margin: 0px 15px 0px 4px;) - 고태윤
 |----------------------------------|
 */
 
@@ -282,7 +283,7 @@ table{
               align-items: center;
               .number{}
               .day{
-                margin:0px 18px 0px 4px;
+                margin: 0px 15px 0px 4px;
               }
             }
             .number{
