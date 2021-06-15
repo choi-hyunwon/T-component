@@ -4,6 +4,7 @@
  v.0.2 모바일 - 페이지네이션 추가
  v.0.3 모바일(선미)  - 페이지네이션 간격 수정(TP2-1108)
  v.0.3 모바일(선미) - 페이지네이션 이미지 교체(TP2-1108)
+ v.0.4 모바일(고태) - 페이지네이션 중앙정렬
 |----------------------------------|
 */
 
@@ -75,10 +76,10 @@
         background: url("../img/common/ico-pagination-prev.png") no-repeat center center;
       }
       &.disabled{
-          a{
-            background: url("../img/common/ico-pagination-prev-disabled.png") no-repeat  center center;
-          }
+        a{
+          background: url("../img/common/ico-pagination-prev-disabled.png") no-repeat  center center;
         }
+      }
     }
     &.next{
       height: 24px;
@@ -88,10 +89,10 @@
         background: url("../img/common/ico-pagination-next.png") no-repeat  center center;
       }
       &.disabled{
-           a{
-             background: url("../img/common/ico-pagination-next-disabled.png") no-repeat  center center;
-           }
-         }
+        a{
+          background: url("../img/common/ico-pagination-next-disabled.png") no-repeat  center center;
+        }
+      }
     }
     &.first {
       height: 24px;
@@ -101,10 +102,10 @@
         background: url("../img/common/ico-pagination-first.png") no-repeat center center;
       }
       &.disabled{
-          a{
-            background: url("../img/common/ico-pagination-first-disabled.png") no-repeat  center center;
-          }
+        a{
+          background: url("../img/common/ico-pagination-first-disabled.png") no-repeat  center center;
         }
+      }
     }
     &.last{
       height: 24px;
@@ -114,17 +115,17 @@
         background: url("../img/common/ico-pagination-last.png") no-repeat center center;
       }
       &.disabled{
-           a{
-             background: url("../img/common/ico-pagination-last-disabled.png") no-repeat  center center;
-           }
-         }
+        a{
+          background: url("../img/common/ico-pagination-last-disabled.png") no-repeat  center center;
+        }
+      }
     }
   }
 }
 
 
 .mobile {
-  .pagination{ margin:30px 0px 80px;
+  .pagination{ margin:30px 0px 80px;  margin-left: -20px; padding-left: 10px;
     .page-item{width:32px; height:32px;line-height: 28px;
       .page-link{font-size:14px; width:32px; height:32px; }
       &.active{
