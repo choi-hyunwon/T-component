@@ -68,8 +68,8 @@
             .item_body_item:last-of-type{
               .body_contents{
                 .accordion_block:last-of-type {
-                  .contests_head {border:1px solid red; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
-                  .contents_body {border:1px solid red; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
+                  .contests_head {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
+                  .contents_body {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
                 }
               }  
             }
