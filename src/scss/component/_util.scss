@@ -3,6 +3,7 @@
  v.0.1 최초 공통화 작업
  v.0.2 모바일 버튼 믹싱사이즈 변경
  v.0.3 util - no-data - 모바일버전 생성
+ v.0.4 util - no-data  공통화작업 - 박선미
 |----------------------------------|
 */
 
@@ -357,13 +358,22 @@ label {
     font-weight: $font-weight-light;
     padding-top: 50px;
     background: url(../img/common/ico_warring.png) no-repeat center top;
-    margin-bottom: 16px;
+    margin-bottom: 0
+  }
+  .btn{
+    margin-top: 16px;
   }
 }
 
 /* util - no-data - 모바일버전 생성 - 한성수 - 21.04.21 */
 .mobile {
   .no-data {
+    .text{  /* no-data - 모바일버전  가이드 제작 - 게시글없음 , 결과없음 페이지 - 21.06.17 */
+      font-size:14px;
+      padding-top: 68px;
+      background: url(../img/m-common/ico-exclamation-gray-big.png) no-repeat center top / 52px 52px;
+      color:$gray-2;
+    }
     .btn {@include btn-circle()}
   }
 }
