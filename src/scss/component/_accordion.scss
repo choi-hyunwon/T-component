@@ -18,6 +18,7 @@
  v 1.5 - popup-accordion itemhead - 한성수
  v 1.6 - &.title_single {margin-bottom:0px;} 추가 - 한성수
  v 1.7 - .subject-accrodion 추가 - 한성수
+ v 1.8 - m > .down_button - 한성수
 |----------------------------------------------|
 */
 
@@ -1095,7 +1096,7 @@
 
         /* 아코디언용 원형 up&down 버튼 */
         .down_button {
-            width:20px;
+            width:40px; padding-left:20px;
             position: relative;
             .btn-icon-circle {
                 position:absolute; top:50%; transform:translateY(-50%); width:20px; height:20px; background:#fff;
