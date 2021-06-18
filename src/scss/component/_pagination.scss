@@ -5,6 +5,7 @@
  v.0.3 모바일(선미)  - 페이지네이션 간격 수정(TP2-1108)
  v.0.3 모바일(선미) - 페이지네이션 이미지 교체(TP2-1108)
  v.0.4 모바일(고태) - 페이지네이션 중앙정렬
+ v.0.5 모바일(고태) - 페이지네이션 2번째꺼 선택시 붙는 이슈 해결
 |----------------------------------|
 */
 
@@ -127,11 +128,15 @@
 .mobile {
   .pagination{ margin:30px 0px 80px;  margin-left: -20px; padding-left: 10px;
     .page-item{width:32px; height:32px;line-height: 28px;
-      .page-link{font-size:14px; width:32px; height:32px; }
+      .page-link{font-size:14px; width:32px; height:32px;border: 1px solid #fff; border-radius: 50%;
+        margin:0px; padding-left: 5px; padding-right:5px;}
       &.active{
         .page-link {line-height:28px; margin:0px;
-          padding-right: 0;
+          margin:0px;
+          padding-right: 5px;
+          padding-left: 5px;
           font-weight: bold;
+          border: 1px solid $primary;
         }
       }
       &.prev{
