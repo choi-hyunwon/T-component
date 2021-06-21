@@ -3,6 +3,7 @@
  v.0.1 최초 공통화 작업
  v.0.2 .slide-addtional - 교과 부가 이미지 슬라이드 추가 - 한성수
  v.0.3 tp2-1024 수정 
+ v.0.4 tp2-1429 수정 .slide-button
 |----------------------------------|
 */
 
@@ -179,7 +180,7 @@
       }
       .title {font-size:13px; margin-bottom:15px; padding:0px 15px;}
     }
-    .slide-button {width:20px; height:20px; top:45%;
+    .slide-button {width:20px; height:20px; top:78px;
       span {height:1px!important;}
       &.next span:nth-child(1){transform:translate(-50%, 6px) rotate(45deg);}
       &.next span:nth-child(2){transform:translate(-50%, 10px) rotate(-45deg);}
