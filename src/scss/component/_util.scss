@@ -384,8 +384,10 @@ label {
 
 ///모바일에서만 보이는 class
 .show-mobile {display:none!important;}
+.show-mobile-flex{display:none!important;}
 .mobile{
   .show-mobile{display:block!important;}
+  .show-mobile-flex{display:flex!important;}
 }
 
 ///pc에서만 보이는 class
