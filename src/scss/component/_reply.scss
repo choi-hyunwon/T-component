@@ -2,6 +2,7 @@
 |----------------------------------|
  v.0.1 최초 공통화 작업
  v.0.2 reply-box mb0 - 박선미
+ v.0.3 reply-box > title -> border-top 제거 (TP2-1647) - 박선미
 |----------------------------------|
 */
 
@@ -11,7 +12,6 @@
 
   .title {
     display: block;
-    border-top: 1px solid $border-color;
     padding-top: 30px;
     margin-bottom: 10px;
     font-weight: $font-weight-normal;
