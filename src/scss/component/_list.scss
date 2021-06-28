@@ -150,7 +150,9 @@
                 border-bottom-left-radius: 0px;  border-bottom-right-radius: 0px; text-align:center; overflow: hidden;
                 &>img{width:100%; height:100%; }
             }
-            .text_box {display:block; padding:15px;background-color: #fff; border-radius: 6px; border-top-left-radius: 0px;  border-top-right-radius: 0px;}
+            .text_box {display:block; padding:15px;background-color: #fff; border-radius: 6px; border-top-left-radius: 0px;  border-top-right-radius: 0px;
+                .cate {font-size:13px; color:#418ac9; font-weight:$font-weight-bold; letter-spacing: -0.025em; margin-top:0px; margin-bottom:5px; display: block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; min-height:20px;}
+            }
             .title {margin-bottom:8px; font-size:15px; font-weight:$font-weight-light; margin-top:0px; min-height:44px; max-height:44px; overflow:hidden;
                 word-break: break-all;
                 overflow: hidden;
