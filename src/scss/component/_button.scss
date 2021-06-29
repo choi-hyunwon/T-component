@@ -11,6 +11,7 @@
  v.0.8 모바일 - .btn > icon {vertical-align: sub;} 수정 - 한성수
  v.0.9 모바일 - .half-box 마진여백 변경 - 한성수
  v.0.10 모바일 - .half-box 마진여백 다시변경 - 한성수
+ v.0.11 모바일 - .half-box 마진여백 다시변경 2 - 한성수
 |----------------------------------|
 */
 
@@ -349,14 +350,16 @@
     }
   }
   .half-box {
-    width: calc(100% + 8px);
-    margin: 0 -4px; //tp2-812
+    width: 100%;
+    margin: 0px 0px; //tp2-812
     font-size: 0;
+    display:flex;
+    justify-content:space-between;
 
     .btn {
       display: inline-block;
-      width: calc(49.9% - 8px);
-      margin: 0 4px;
+      width: calc(50% - 8px); 
+      margin: 0px;
     }
 
     select{
