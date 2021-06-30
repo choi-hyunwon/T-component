@@ -21,6 +21,7 @@
  v 1.8 - m > .down_button - 한성수
  v 1.9 - m > .mobile .list-accordion .item .item_head .buttons .arrow - 한성수
  v 2.0 - tp2-1704 :: 간섭으로 인해 a를 고유하게 변경 - 한성수
+ v 2.1 - .mobile -> active,focus (차시명,과목명 언더라인 추가)- 박선미
 |----------------------------------------------|
 */
 
@@ -74,9 +75,9 @@
                   .contests_head {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
                   .contents_body {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
                 }
-              }  
+              }
             }
-            
+
           }
         }
       }
@@ -872,6 +873,12 @@
 
 
   .mobile{
+    /*공통 언더라인 - 교과학습,평가자료,교과서자료....*/
+    .title_line , .title_subject{
+      &:active, &:focus{
+        text-decoration: underline;
+      }
+    }
     /*칼럼 그리드*/
     .column-grid{ padding-bottom:0px;
       .item{
