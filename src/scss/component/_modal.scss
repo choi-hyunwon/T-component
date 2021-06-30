@@ -6,6 +6,7 @@
  v.0.4 - 모바일 > modal-body padding 수정 - 한성수
  v.0.5 - pc > modal-dialog before 추가 - 박선미
  v.0.6 - .close 버튼 top값 추가(ie - TP2-1296) - 박선미
+ v.0.7 - 모바일 : footer 안에 half-box{line-height:1} - 박선미
 |----------------------------------------------|
 */
 
@@ -138,7 +139,11 @@
         .close {right:20px;}
       }
       .modal-body { /*min-height:320px;*/  padding:15px 20px 15px;}
-      .modal-footer {margin:0px; padding:20px;}
+      .modal-footer {margin:0px; padding:20px;
+        .half-box{
+          line-height: 1;
+        }
+      }
       &.modal-lg{
         min-width: 320px; margin:0 auto;
       .modal-content{
