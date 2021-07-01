@@ -7,6 +7,7 @@
  v.0.5 - pc > modal-dialog before 추가 - 박선미
  v.0.6 - .close 버튼 top값 추가(ie - TP2-1296) - 박선미
  v.0.7 - 모바일 : footer 안에 half-box{line-height:1} - 박선미
+ v.0.8 - .mobile -> active,focus (차시명,과목명 언더라인 추가)- 박선미
 |----------------------------------------------|
 */
 
@@ -138,7 +139,18 @@
         .modal-title {font-size:16px; font-weight:$font-weight-normal; letter-spacing: -0.8px; color:white;}
         .close {right:20px;}
       }
-      .modal-body { /*min-height:320px;*/  padding:15px 20px 15px;}
+      .modal-body { /*min-height:320px;*/  padding:15px 20px 15px;
+        /*공통 언더라인 - 교과학습,평가자료,교과서자료....*/
+        .popup-subject_data{
+          li{
+            &:active, &:focus{
+              a{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
       .modal-footer {margin:0px; padding:20px;
         .half-box{
           line-height: 1;
