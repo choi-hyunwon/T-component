@@ -23,6 +23,7 @@
  v 2.0 - tp2-1704 :: 간섭으로 인해 a를 고유하게 변경 - 한성수
  v 2.1 - .mobile -> active,focus (차시명,과목명 언더라인 추가)- 박선미
  v 2.2 - .list-accordion > .item .item_body .body_head -> margin-bottom 1px 추가(TP2-1784 : border 클릭시 border 사라짐 이슈)-박선미
+ v 2.3 - .list-accordion > &.subject-accordion .item_body_item:last-of-type .body_contents (TP2-1864: border-radius 추가)-박선미
 |----------------------------------------------|
 */
 
@@ -72,6 +73,8 @@
           .item_body {
             .item_body_item:last-of-type{
               .body_contents{
+                overflow: hidden;
+                border-radius: 0 0 10px 10px;
                 .accordion_block:last-of-type {
                   .contests_head {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
                   .contents_body {border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
