@@ -4,6 +4,7 @@
  v.0.2 모바일 버튼 믹싱사이즈 변경
  v.0.3 util - no-data - 모바일버전 생성
  v.0.4 util - no-data  공통화작업 - 박선미
+ v.0.5 util - .search-keyword 오타 수정및 css추가 - 박선미
 |----------------------------------|
 */
 
@@ -332,7 +333,6 @@ label {
     content: "";
     width: 4px;
     height: 4px;
-    background: #000;
     border-radius: 100%;
     margin-right: 9px;
     background-color: #666;
@@ -343,11 +343,15 @@ label {
 //div안에 d-flex align-items-baseline 으로 클래스를 넣은후 사용하면됩니다.
 
 
-/*검색결과 배경*/
-.search-keword {background:#418ac9; color:white; opacity: 0.8; display:inline-block; line-height:120%;padding: 0 2px}
-
-
-
+/*검색결과배경*/
+.search-keyword {
+  background: #418ac9;
+  color: white!important;
+  opacity: 0.8;
+  display: inline-block;
+  line-height: 120%;
+  padding: 0 2px;
+}
 
 /*데이터 없을경우*/
 .no-data {
