@@ -25,6 +25,7 @@
  v 2.2 - .list-accordion > .item .item_body .body_head -> margin-bottom 1px 추가(TP2-1784 : border 클릭시 border 사라짐 이슈)-박선미
  v 2.3 - .list-accordion > &.subject-accordion .item_body_item:last-of-type .body_contents (TP2-1864: border-radius 추가)-박선미
  v 2.4 - .item_body_item:last-of-type .body_contents -> ( TP2-1879 : 최근 차시 팝업 이슈 overflow: hidden; 제거 )-박선미
+ v 2.5 - .mobile .list-accordion .item:first-child:last-child .item_head ( item 1개 일때 - border추가,radius제거 / TP2-1947)-박선미
 |----------------------------------------------|
 */
 
@@ -974,8 +975,17 @@
 
 
         .item {
-            &:first-child .item_head {border-top-left-radius: 6px; border-top-right-radius: 6px;}
-            &:last-child .item_head{border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;border-bottom: none}
+          &:first-child{
+            .item_head {border-top-left-radius: 6px; border-top-right-radius: 6px;}
+            &:last-child{
+              .item_head{
+                border-bottom: 1px solid #ccc;border-radius: 0;
+              }
+            }
+          }
+          &:last-child {
+            .item_head{border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;border-bottom: none}
+          }
 
             .item_head{position:relative; background:#f0f3f7; padding: 24px 16px 24px; width:100%; display: block;  border-bottom:1px solid #e0e0e0;
                 &:after {display:block; content:""; clear:both;}
