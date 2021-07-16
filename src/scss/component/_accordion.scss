@@ -26,6 +26,7 @@
  v 2.3 - .list-accordion > &.subject-accordion .item_body_item:last-of-type .body_contents (TP2-1864: border-radius 추가)-박선미
  v 2.4 - .item_body_item:last-of-type .body_contents -> ( TP2-1879 : 최근 차시 팝업 이슈 overflow: hidden; 제거 )-박선미
  v 2.5 - .mobile .list-accordion .item:first-child:last-child .item_head ( item 1개 일때 - border추가,radius제거 / TP2-1947)-박선미
+ v 2.6 - .mobile .code-accordion .item .item_head .txt( 텍스트 정렬 좌측정렬로 변경  / TP2-1969)-박선미
 |----------------------------------------------|
 */
 
@@ -1154,7 +1155,7 @@
         }
 
         .item_head{
-          .txt {flex-direction:column; margin-bottom:0px;
+          .txt {flex-direction:column; margin-bottom:0px;align-items: flex-start;
             .title{width:100%; margin-bottom:15px;}
           }
         }
