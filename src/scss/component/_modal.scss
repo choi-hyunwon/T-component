@@ -8,16 +8,15 @@
  v.0.6 - .close 버튼 top값 추가(ie - TP2-1296) - 박선미
  v.0.7 - 모바일 : footer 안에 half-box{line-height:1} - 박선미
  v.0.8 - .mobile -> active,focus (차시명,과목명 언더라인 추가)- 박선미
+ v.0.9 팝업 크기에 따른 스크롤 수정 / TP2-1998)-  박선미
 |----------------------------------------------|
 */
-
+.modal-open{
+  overflow-y: hidden;
+}
 /*modal size*/
 .modal{
   .modal-dialog{
-      &:before{
-        height: calc(100vh - 1rem);
-      }
-
       &.modal-lg{
       min-width: 787px;
     .modal-content{
