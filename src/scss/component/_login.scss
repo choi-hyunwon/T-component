@@ -1,7 +1,13 @@
+/*
+|----------------------------------------------|
+ v.0.1 최초 공통화 작업
+ v.0.2 뒤로가기 버튼 크기 수정 - 박선미
+|----------------------------------------------|
+*/
 .mobile{
   .section-login {background:#203c6a; height:100vh;
-    .login-header {padding:22px 21px; padding-bottom:0px;
-      .back_button {height:16px; display:inline-block;
+    .login-header {padding:22px 21px 0;
+      .back_button {display:inline-block;width: 30px;height: 30px;
         img {width:9px; height:16px; display:block;}
       }
     }
